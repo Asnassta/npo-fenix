@@ -134,10 +134,12 @@ $(document).ready(function() {
 /*==/service__slider==*/
 
 /*==Partner__slider==*/
+  /*==Partner__slider==*/
   $('.partner__slider').slick({
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
+      slidesPerRow: 1,
       rows: 3,
       prevArrow: $('.partner .slider-arrows__arrow_prev'),
       nextArrow: $('.partner .slider-arrows__arrow_next'),
@@ -145,39 +147,40 @@ $(document).ready(function() {
       {
         breakpoint: 993,
         settings: {
-          infinite: true,
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesPerRow: 1,
           rows: 3,
-          prevArrow: $('.partner .slider-arrows__arrow_prev'),
-          nextArrow: $('.partner .slider-arrows__arrow_next'),
+          slidesToShow: 2,
         }
       },
       {
         breakpoint: 769,
         settings: {
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesPerRow: 1,
           rows: 3,
-          prevArrow: $('.partner .slider-arrows__arrow_prev'),
-          nextArrow: $('.partner .slider-arrows__arrow_next'),
+          slidesToShow: 1,
         }
       },
       {
         breakpoint: 415,
         settings: {
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesPerRow: 1,
           rows: 1,
-          prevArrow: $('.partner .slider-arrows__arrow_prev'),
-          nextArrow: $('.partner .slider-arrows__arrow_next'),
+          slidesToShow: 1,
         }
       },
       ]
   });
   /*==/partner__slider==*/
+
+   /*==About__slider==*/
+  $('.about__slider').slick({
+      infinite: true,
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.about .slider-arrows__arrow_prev'),
+      nextArrow: $('.about .slider-arrows__arrow_next'),
+  });/*==/about__slider==*/
 
   /*======/sliders=============*/
 
