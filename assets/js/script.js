@@ -26,6 +26,20 @@ $(document).ready(function() {
   });
   /*==========/menu-toggle=========*/
 
+  /*=========Smooth scroll=============*/
+  $("[data-scroll]").on("click", function(event) {
+  event.preventDefault();
+ 
+      blockID = $(this).data('scroll');
+     
+      blockOffset = $('#'+blockID).offset().top;
+ 
+    $("html, body").animate ({
+      scrollTop: blockOffset - 30
+    }, 500);
+  });
+/*=========/smooth scroll=============*/
+
   /*======Sliders=============*/
 
   /*==Intro__slider==*/
