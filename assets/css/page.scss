@@ -409,7 +409,7 @@
 /*========Mobile-menu======*/
 .mobile-menu {
 	display: none;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	z-index: 50;
@@ -545,7 +545,7 @@
 		background-color: $wh;
 		display: flex;
 		justify-content: space-between;
-		margin-right: -170px;
+		margin-right: -167px;
 		position: relative;
 		padding-left: 1px;
 		&:before {
@@ -783,10 +783,10 @@
 		&.active {
 			transform: translateX(0);
 		}
-		&.footer {
+		/*&.footer {
 			top: auto;
 			bottom: 0;
-		}
+		}*/
 	}
 	.nav {
 		&__link {

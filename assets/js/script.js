@@ -8,20 +8,13 @@ $(document).ready(function() {
   /*==========/lang-toggle=========*/
 
   /*======Menu-toggle=============*/
-  $(".header__burger").on("click", function() {
+  $(".burger").on("click", function() {
     $(".mobile-menu").addClass('active');
-    $("body").addClass('hidden');
-  });
-
-  $(".footer__burger").on("click", function() {
-    $(".mobile-menu").addClass('active');
-    $(".mobile-menu").addClass('footer');
     $("body").addClass('hidden');
   });
 
     $(".mobile-menu__close").on("click", function() {
     $(".mobile-menu").removeClass('active');
-    $(".mobile-menu").removeClass('footer');
     $("body").removeClass('hidden');
   });
   /*==========/menu-toggle=========*/
@@ -141,7 +134,6 @@ $(document).ready(function() {
 });
 /*==/service__slider==*/
 
-/*==Partner__slider==*/
   /*==Partner__slider==*/
   $('.partner__slider').slick({
       infinite: true,
@@ -239,7 +231,67 @@ $(document).ready(function() {
       slidesToScroll: 1,
       prevArrow: $('.reviews .slider-arrows__arrow_prev'),
       nextArrow: $('.reviews .slider-arrows__arrow_next'),
+      responsive: [
+        {
+          breakpoint: 1200, 
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            }
+        },
+        {
+          breakpoint: 765, 
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            }
+        },
+        {
+          breakpoint: 547, 
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            }
+        },
+        {
+          breakpoint: 377, 
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+        },
+      ]
   });/*==/reviews__slider==*/
+
+    /*==Testimonial__slider==*/
+  $('.testimonial__slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      slidesPerRow: 1,
+      rows: 2,
+      prevArrow: $('.testimonial .slider-arrows__arrow_prev'),
+      nextArrow: $('.testimonial .slider-arrows__arrow_next'),
+      responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesPerRow: 1,
+          rows: 2,
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 547,
+        settings: {
+          slidesPerRow: 1,
+          rows: 1,
+          slidesToShow: 1,
+        }
+      },
+      ]
+  });
+  /*==/testimonial__slider==*/
 
   /*======/sliders=============*/
 
