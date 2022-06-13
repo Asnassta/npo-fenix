@@ -14,16 +14,16 @@
 	&__item {
 		display: inline-flex;
 		align-items: flex-start;
-		margin-right: 48px;
+		margin-left: 48px;
 		position: relative;
 		transition: all .2s linear;
-		&:last-child {
-			margin-right: 0;
-			&:after {
+		&:first-child {
+			margin-left: 0;
+			&:before {
 				display: none;
 			}
 		}
-		&:after {
+		&:before {
 			content: "";
 			width: 1px;
 			height: 18px;
@@ -32,7 +32,7 @@
 			transform: rotate(-25.77deg) translateY(-50%);
 			position: absolute;
 			top: 50%;
-			right: -23.5px;
+			left: -23.5px;
 			z-index: 1;
 		}
 		svg {
@@ -41,6 +41,9 @@
 			fill: $lbrown;
 			margin-right: 20px;
 			transition: all .2s linear;
+			&:nth-child(2) {
+				display: none;
+			}
 		}
 		span {
 			font-family: $ff;
@@ -372,7 +375,7 @@
 	}
 	&__info {
 		flex: 0 0 400px;
-		padding: 2px 30px 2px 0;
+		padding: 2px 30px 0 2px;
 		margin: -2px 0;
 		display: flex;
 		flex-direction: column;
@@ -746,6 +749,9 @@
 			flex: 1 1 auto;
 			padding-right: 0;
 		}
+		.title {
+			font-size: 28px;
+		}
 		&__inner {
 			display: block;
 			position: relative;
@@ -771,6 +777,24 @@
 	.reviews {
 		.slick-list {
 			padding-right: 50%;
+		}
+	}
+	.breadcrumbs {
+		&__item {
+			&:nth-child(n+2) {
+				display: none;
+			}
+			svg {
+				&:first-child {
+					display: none;
+				}
+				&:nth-child(2) {
+					margin-top: 3px;
+					width: 12px;
+					height: 12px;
+					display: block;
+				}
+			}
 		}
 	}
 }

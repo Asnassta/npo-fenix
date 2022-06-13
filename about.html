@@ -11,12 +11,17 @@
 <body>
 	<!--Sprite-->
 	<svg style="display: none;">
-		<symbol id="plus" viewBox="0 0 16 16">
+		<symbol id="arrow-unline" viewBox="0 0 8 12">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M2.27624 6.00005L7.13817 10.862L6.19536 11.8048L0.390625 6.00005L6.19536 0.195312L7.13817 1.13812L2.27624 6.00005Z"/>
+			</g>
+		</symbol>
+		<symbol id="plus-icon" viewBox="0 0 16 16">
 			<g>
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M9 7H14V9H9V14H7V9H2V7H7V2H9V7Z"/>
 			</g>
 		</symbol>
-		<symbol id="minus" viewBox="0 0 12 2">
+		<symbol id="minus-icon" viewBox="0 0 12 2">
 			<g>
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2V0H12V2H0Z"/>
 			</g>
@@ -276,7 +281,7 @@
 								<a href="#" class="mobile-menu__link">Вакансии</a>
 							</li>
 							<li>
-								<a href="#" class="mobile-menu__link">О Нас</a>
+								<a href="about.html" class="mobile-menu__link">О Нас</a>
 							</li>
 							<li>
 								<a href="#" class="mobile-menu__link">Контакты</a>
@@ -337,13 +342,16 @@
 			<div class="page__header">
 				<div class="container">
 					<div class="breadcrumbs">
-						<a href="#" class="breadcrumbs__item">
+						<a href="index.html" class="breadcrumbs__item">
 							<svg>
 								<use xlink:href="#home"></use>
 							</svg>
+							<svg>
+								<use xlink:href="#arrow-unline"></use>
+							</svg>
 							<span>Главная</span>
 						</a>
-						<a href="#" class="breadcrumbs__item active">
+						<a href="about.html" class="breadcrumbs__item active">
 							<span>О нас</span>
 						</a>
 					</div><!--/breadcrumbs-->
@@ -354,7 +362,7 @@
 					<div class="about__inner">
 						<div class="about__info">
 							<div class="title-box">
-								<h1 class="title">О Нас</h1>
+								<h2 class="title">О Нас</h2>
 								<div class="subtitle">Научно Производственное Объединение «ФЕНИКС»</div>
 							</div>
 							<div class="description">
@@ -403,12 +411,12 @@
 						<div class="popup-about__buttons">
 							<a href="#" class="popup-about__btn popup-about__btn-plus" id="plus" onclick="return bzoom('plus');">
 								<svg>
-									<use xlink:href="#plus"></use>
+									<use xlink:href="#plus-icon"></use>
 								</svg>
 							</a>
 							<a href="#" class="popup-about__btn popup-about__btn-minus" id="minus" onclick="return bzoom('minus');">
 								<svg>
-									<use xlink:href="#minus"></use>
+									<use xlink:href="#minus-con"></use>
 								</svg>
 							</a>
 						</div>
