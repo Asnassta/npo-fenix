@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<title>Феникс</title>
 </head>
@@ -400,12 +401,12 @@
 				<div class="popup-about">
 					<div class="popup-about__inner">
 						<div class="popup-about__buttons">
-							<a href="#" class="popup-about__btn popup-about__btn-plus" id="plus" onclick="return bzoom('map', 'plus');">
+							<a href="#" class="popup-about__btn popup-about__btn-plus" id="plus" onclick="return bzoom('plus');">
 								<svg>
 									<use xlink:href="#plus"></use>
 								</svg>
 							</a>
-							<a href="#" class="popup-about__btn popup-about__btn-minus" id="minus" onclick="return bzoom('map', 'minus');">
+							<a href="#" class="popup-about__btn popup-about__btn-minus" id="minus" onclick="return bzoom('minus');">
 								<svg>
 									<use xlink:href="#minus"></use>
 								</svg>
@@ -417,36 +418,38 @@
 							</svg>
 						</div>
 						<div class="slider-arrows slider-arrows_big">
-								<div class="slider-arrows__arrow slider-arrows__arrow_prev">
-									<svg>
-										<use xlink:href="#arrow"></use>
-									</svg>
-								</div>
-								<div class="slider-arrows__arrow slider-arrows__arrow_next">
-									<svg>
-										<use xlink:href="#arrow-long"></use>
-									</svg>
-									<svg>
-										<use xlink:href="#arrow"></use>
-									</svg>
-								</div>
-							</div><!--/slider-arrows-->	
+							<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+								<svg>
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</div>
+							<div class="slider-arrows__arrow slider-arrows__arrow_next">
+								<svg>
+									<use xlink:href="#arrow-long"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</div>
+						</div><!--/slider-arrows-->	
 						<div class="popup-about__slider">
+
 							<div class="popup-about__slide">
-								<div id="border1" class="popup-about__item main-border">
-									<img id="map" src="assets/images/production.png" alt="">
+								<div class="popup-about__item main-border">
+									<img  src="assets/images/production.png" id="active_border" alt="">
 								</div>
 							</div><!--/popup-about__slide-->
 							<div class="popup-about__slide">
-								<div id="border1" class="popup-about__item main-border">
-									<img id="map" src="assets/images/production.png" alt="">
+								<div class="popup-about__item main-border">
+									<img src="assets/images/production.png"  alt="">
 								</div>
 							</div><!--/popup-about__slide-->
 							<div class="popup-about__slide">
-								<div id="border1" class="popup-about__item main-border">
-									<img id="map" src="assets/images/production.png" alt="">
+								<div  class="popup-about__item main-border">
+									<img  src="assets/images/production.png" alt="">
 								</div>
 							</div><!--/popup-about__slide-->
+
 						</div>
 					</div>
 				</div><!--/popup-about-->
@@ -520,7 +523,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="list-product__col list-product__col_more">
+						<div class="list-product__col text-more">
 							<ul class="list-numbers">
 								<li>
 									<a href="#" class="list-numbers__item">
@@ -590,7 +593,7 @@
 								</li>
 							</ul>
 						</div>
-						<a href="#" class="list-product__more">Подробнее</a>
+						<a href="#" class="text-more__btn">Подробнее</a>
 					</div>
 				</div>
 			</section><!--/list-product-->
@@ -617,38 +620,136 @@
 						<div class="sertificats__slider">
 							<div class="sertificats__slide">
 								<div class="sertificats__item">
-									<img src="assets/images/sertificat_1.png" alt="">
+									<img data-fancybox="sertificats" src="assets/images/sertificat_1.jpg" alt="">
 								</div>
 							</div>
 							<div class="sertificats__slide">
 								<div class="sertificats__item">
-									<img src="assets/images/sertificat_2.png" alt="">
+									<img data-fancybox="sertificats" src="assets/images/sertificat_2.jpg" alt="">
 								</div>
 							</div>
 							<div class="sertificats__slide">
 								<div class="sertificats__item">
-									<img src="assets/images/sertificat_3.png" alt="">
+									<img data-fancybox="sertificats" src="assets/images/sertificat_3.jpg" alt="">
 								</div>
 							</div>
 							<div class="sertificats__slide">
 								<div class="sertificats__item">
-									<img src="assets/images/sertificat_4.png" alt="">
+									<img data-fancybox="sertificats" src="assets/images/sertificat_4.jpg" alt="">
 								</div>
 							</div>
 							<div class="sertificats__slide">
 								<div class="sertificats__item">
-									<img src="assets/images/sertificat_5.png" alt="">
+									<img data-fancybox="sertificats" src="assets/images/sertificat_5.jpg" alt="">
 								</div>
 							</div>
 							<div class="sertificats__slide">
 								<div class="sertificats__item">
-									<img src="assets/images/sertificat_3.png" alt="">
+									<img data-fancybox="sertificats" src="assets/images/sertificat_3.jpg" alt="">
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section><!--/sertificats-->
+			<section class="advantages bg-gray bg-line bg-line_left">
+				<div class="container">
+					<div class="title-box">
+						<h2 class="title">По заказу клиента </h2>
+						<div class="subtitle">мы готовы изготовить продукцию требуемого химического состава.</div>
+					</div>
+					<div class="advantages__inner">
+						<div class="advantages__text">
+							<p>Соответствие продукции НПО “Феникс” заявленным характеристикам обеспечивается за счет ряда организационных и технологических мероприятий, в том числе:</p>
+							<ul class="list-dots">
+								<li class="list-dots__strong">Наличия собственной испытательной (аналитической) лаборатории №SP01.01.062.172</li>
+								<li>Входной контроль сырья для производства</li>
+								<li>Выходной контроль качества продукции</li>
+								<li>Соблюдения жестких требований к технологическому процессу</li>
+							</ul>
+							<div class="text-more">
+								<p>Наличие лицензий и сертификатов на все выполняемые нами работы, высокая квалификация инженерного и технического состава, современное оборудование позволяют выполнять все заказы в соответствии с требованиями ГОСТов и пожеланиями Заказчиков.</p>
+								<p>Умеренные расценки, широкий ассортимент предлагаемой продукции, аккуратное выполнение своих обязательств являются основой многолетнего сотрудничества с нашими партнерами.</p>
+								<p>Доставка до склада Покупателя осуществляется силами собственного автопарка или транспортной компании</p>
+								<p>Мы предлагаем Вам сотрудничество и надеемся, что оно будет взаимовыгодным и длительным.</p>
+							</div>
+							<a href="#" class="text-more__btn">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</section><!--/advantages-->
+			<section class="reviews">
+				<div class="container">
+					<div class="reviews__header">
+						<div class="title-box">
+							<h2 class="title">Отзывы о НПО «ФЕНИКС»</h2>
+							<div class="subtitle">Что о нас говорят наши партнёры</div>
+						</div>
+						<div class="slider-arrows">
+							<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+								<svg>
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</div>
+							<div class="slider-arrows__arrow slider-arrows__arrow_next">
+								<svg>
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</div>
+						</div><!--/slider-arrows-->
+					</div>
+					<div class="reviews__slider">
+						<div class="reviews__slide">
+							<div class="reviews__item">
+								<div class="reviews__photo">
+									<img data-fancybox="reviews" src="assets/images/reviews-photo_1.jpg" alt="">
+								</div>
+								<div class="reviews__autor">ОАО "Ковровский ЭМЗ"</div>
+							</div>
+						</div><!--/reviews__slide-->
+						<div class="reviews__slide">
+							<div class="reviews__item">
+								<div class="reviews__photo">
+									<img data-fancybox="reviews" src="assets/images/reviews-photo_2.jpg" alt="">
+								</div>
+								<div class="reviews__autor">ОАО "Ковровский ЭМЗ"</div>
+							</div>
+						</div><!--/reviews__slide-->
+						<div class="reviews__slide">
+							<div class="reviews__item">
+								<div class="reviews__photo">
+									<img data-fancybox="reviews" src="assets/images/reviews-photo_3.jpg" alt="">
+								</div>
+								<div class="reviews__autor">ОАО "Ковровский ЭМЗ"</div>
+							</div>
+						</div><!--/reviews__slide-->
+						<div class="reviews__slide">
+							<div class="reviews__item">
+								<div class="reviews__photo">
+									<img data-fancybox="reviews" src="assets/images/reviews-photo_4.jpg" alt="">
+								</div>
+								<div class="reviews__autor">ОАО "Ковровский ЭМЗ"</div>
+							</div>
+						</div><!--/reviews__slide-->
+						<div class="reviews__slide">
+							<div class="reviews__item">
+								<div class="reviews__photo">
+									<img data-fancybox="reviews" src="assets/images/reviews-photo_1.jpg" alt="">
+								</div>
+								<div class="reviews__autor">ОАО "Ковровский ЭМЗ"</div>
+							</div>
+						</div><!--/reviews__slide-->
+						<div class="reviews__slide">
+							<div class="reviews__item">
+								<div class="reviews__photo">
+									<img data-fancybox="reviews" src="assets/images/reviews-photo_3.jpg" alt="">
+								</div>
+								<div class="reviews__autor">ОАО "Ковровский ЭМЗ"</div>
+							</div>
+						</div><!--/reviews__slide-->
+					</div>
+				</div>
+			</section><!--/reviews-->
 		</main>
 
 		<footer class="footer">
@@ -760,6 +861,7 @@
 
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 	<script src="assets/js/script.js"></script>
 
 </body>
