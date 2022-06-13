@@ -1718,7 +1718,8 @@
   .breadcrumbs__item {
     display: none; }
     .breadcrumbs__item_back {
-      display: inline-block; }
+      display: inline-block;
+      margin-left: 0; }
       .breadcrumbs__item_back:before {
         display: none; }
   .breadcrumbs__btn-home {
