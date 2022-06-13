@@ -1,6 +1,6 @@
 $(document).ready(function() {
+
 	/*======Lang-toggle=============*/
-  
   $(".header-lang").on("click", function() {
     $(this).toggleClass("active");
     $(".header-lang__dropdown").slideToggle();
@@ -25,6 +25,27 @@ $(document).ready(function() {
     $("body").removeClass('hidden');
   });
   /*==========/menu-toggle=========*/
+
+  /*======Popup=============*/
+   $(".about__item").on("click", function() {
+    $(".popup-about").fadeIn();
+    //$('.popup-about').css('top', $(window).scrollTop()+'px');
+    $("body").addClass('hidden');
+  });
+
+   $(".popup-about__close").on("click", function() {
+    $(".popup-about").fadeOut();
+    $("body").removeClass('hidden');
+  });
+
+  /*==========/popup=========*/
+
+  /*======List-product__more=============*/
+    $(".list-product__more").on("click", function(event) {
+        event.preventDefault();
+      $(".list-product__col_more").slideToggle();
+  });
+  /*==========/list-product__more=========*/
 
   /*=========Smooth scroll=============*/
   $("[data-scroll]").on("click", function(event) {
@@ -178,11 +199,124 @@ $(document).ready(function() {
       dots: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      prevArrow: $('.about .slider-arrows__arrow_prev'),
-      nextArrow: $('.about .slider-arrows__arrow_next'),
+      prevArrow: $('.about__inner .slider-arrows__arrow_prev'),
+      nextArrow: $('.about__inner .slider-arrows__arrow_next'),
   });/*==/about__slider==*/
+
+  /*==About__slider==*/
+  $('.popup-about__slider').slick({
+      infinite: true,
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.popup-about .slider-arrows__arrow_prev'),
+      nextArrow: $('.popup-about .slider-arrows__arrow_next'),
+  });/*==/about__slider==*/
+
+  /*==Intro__slider==*/
+  $('.sertificats__slider').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      prevArrow: $('.sertificats .slider-arrows__arrow_prev'),
+      nextArrow: $('.sertificats .slider-arrows__arrow_next'),
+      responsive: [
+      {
+        breakpoint: 993,
+        settings: {
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          prevArrow: $('.sertificats .slider-arrows__arrow_prev'),
+          nextArrow: $('.sertificats .slider-arrows__arrow_next'),
+        }
+      },
+      {
+        breakpoint: 766,
+        settings: {
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          prevArrow: $('.sertificats .slider-arrows__arrow_prev'),
+          nextArrow: $('.sertificats .slider-arrows__arrow_next'),
+        }
+      },
+      {
+        breakpoint: 415,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          prevArrow: $('.sertificats .slider-arrows__arrow_prev'),
+          nextArrow: $('.sertificats .slider-arrows__arrow_next'),
+        }
+      }
+    ]
+  });/*==/intro__slider==*/
 
   /*======/sliders=============*/
 
 });
 
+
+
+function bzoom(Element, t) {
+  var block = document.getElementById('map');
+  if(t == 'plus')
+  {
+    
+      x += 15;
+      block.style.width = x + '%';
+    }
+    else
+    {
+
+      x -= 15;
+      block.style.width = x + '%';
+    }
+}
+
+    //КОД ПРИБЛИЖЕНИЯ И ОТДАЛЕНИЯ
+var block = document.getElementById('map');
+var x = 100;
+
+block.onwheel = function(event) {
+        if(event.deltaY < 0 && x < 500){
+        x += 5;
+        this.style.width = x + '%';
+    }
+    if(event.deltaY > 0 && x > 100){
+        x -= 5;
+        this.style.width = x + '%';
+    }
+    return false;
+}
+
+//КОД ПЕРЕМЕЩЕНИЯ
+var blockmove = document.getElementById('border1');
+var left = 0, tp = 0, xx, yy;
+
+
+blockmove.onmousedown = function(e) {
+  e.preventDefault();
+  xx = e.pageX;
+  yy = e.pageY;
+
+
+  function moveAt(e) {
+    block.style.left = (left + e.pageX - xx) + 'px';
+    block.style.top = (tp + e.pageY - yy) + 'px';
+  }
+
+  blockmove.onmousemove = function(e) {
+    moveAt(e);
+  }
+
+blockmove.onmouseleave = blockmove.onmouseup = function(e) {
+    left = parseFloat(block.style.left);
+    tp = parseFloat(block.style.top);
+    blockmove.onmouseleave = null;
+    blockmove.onmousemove = null;
+    blockmove.onmouseup = null;
+  }
+}

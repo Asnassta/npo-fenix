@@ -1,6 +1,7 @@
 @import 'fonts.scss';
 @import 'variables.scss';
 @import 'page.scss';
+@import 'pages.scss';
 
 /*Reset
 ===============*/
@@ -131,6 +132,12 @@ body {
 	font-weight: 400;
 	color: $bl;
 	line-height: 1.5;
+	p {
+		margin-bottom: 20px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .btn {
@@ -476,11 +483,19 @@ body {
 	&__slider {
 		margin-top: 50px;
 		display: flex;
-		margin-right: -30px;
 	}
 	&__slide {
 		width: calc(33.33333% - 30px);
+		height: 100%;
+	}
+	.slick-list {
+		margin-right: -30px;
+	}
+	.slick-slide {
 		margin-right: 30px;
+		>div {
+			height: 100%;
+		}
 	}
 	&__row {
 		display: flex;
@@ -764,16 +779,15 @@ body {
 		.slick-list {
 			margin-left: -12px;
 		}
-		&__slide {
+		.slick-slide {
 			margin-left: 12px;
 		}
 	}
 	.service {
-		&__slider {
+		.slick-list {
 			margin-right: -12px;
 		}
-		&__slide {
-			width: calc(33.33333% - 12px);
+		.slick-slide {
 			margin-right: 12px;
 		}
 	}
