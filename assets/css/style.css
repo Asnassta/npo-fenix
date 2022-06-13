@@ -970,6 +970,19 @@
     -webkit-box-shadow: 0px 20px 50px rgba(55, 32, 14, 0.1);
     box-shadow: 0px 20px 50px rgba(55, 32, 14, 0.1); } }
 
+.page_gray-foot .footer__nav {
+  background-color: #F9F9F9; }
+  .page_gray-foot .footer__nav:before {
+    background-color: #F9F9F9; }
+
+.page_gray-foot .footer__info {
+  background-color: #fff; }
+  .page_gray-foot .footer__info:before {
+    background-color: #fff; }
+
+.page_gray-foot .arrow-top:hover {
+  background-color: #fff; }
+
 /*========Breadcrumbs=======*/
 .breadcrumbs {
   margin: 24px 0 30px;
@@ -979,10 +992,29 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .breadcrumbs__btn svg {
+    width: 16px;
+    height: 16px;
+    fill: #BF9D77;
+    margin-right: 20px;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
+    .breadcrumbs__btn svg:nth-child(2) {
+      display: none; }
+  .breadcrumbs__btn:hover svg {
+    fill: #983031; }
+  .breadcrumbs__btn-back {
+    display: none; }
+    .breadcrumbs__btn-back svg {
+      width: 12px;
+      height: 12px; }
+  .breadcrumbs__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .breadcrumbs__item {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: inline-block;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -1008,16 +1040,6 @@
       top: 50%;
       left: -23.5px;
       z-index: 1; }
-    .breadcrumbs__item svg {
-      width: 16px;
-      height: 16px;
-      fill: #BF9D77;
-      margin-right: 20px;
-      -webkit-transition: all .2s linear;
-      -o-transition: all .2s linear;
-      transition: all .2s linear; }
-      .breadcrumbs__item svg:nth-child(2) {
-        display: none; }
     .breadcrumbs__item span {
       font-family: "Roboto", sans-serif;
       font-size: 12px;
@@ -1480,8 +1502,32 @@
     width: 100%; }
 
 /*========/testimonial========*/
+/*=======Services=======*/
+.services {
+  margin-bottom: 100px; }
+  .services__inner {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px; }
+    .services__inner > * {
+      width: calc(33.33333% - 30px);
+      margin-left: 30px;
+      margin-bottom: 30px; }
+  .services .info-box {
+    background-color: #F9F9F9; }
+
+/*=======/services=======*/
 /*========Adaptive======*/
 @media (max-width: 1200px) {
+  .page_gray-foot .footer__info {
+    background-color: #F9F9F9; }
+    .page_gray-foot .footer__info:before {
+      background-color: #F9F9F9; }
   .sertificats {
     padding: 70px  0 80px; }
     .sertificats .slick-slide {
@@ -1545,7 +1591,16 @@
     margin-right: -400px;
     padding-right: 120px; }
   .advantages__inner {
-    margin-top: 30px; } }
+    margin-top: 30px; }
+  .services {
+    margin-bottom: 80px; }
+    .services__inner {
+      margin-left: -12px;
+      margin-bottom: -12px; }
+      .services__inner > * {
+        width: calc(50% - 12px);
+        margin-left: 12px;
+        margin-bottom: 12px; } }
 
 @media (max-width: 768px) {
   .testimonial__info {
@@ -1647,18 +1702,29 @@
     margin-top: 30px;
     width: 100%; } }
 
+@media (max-width: 540px) {
+  .services {
+    margin-bottom: 50px; }
+    .services__inner {
+      margin-top: 30px;
+      margin-left: 0; }
+      .services__inner > * {
+        width: 100%;
+        margin-left: 0; } }
+
 @media (max-width: 376px) {
   .reviews .slick-list {
     padding-right: 50%; }
-  .breadcrumbs__item:nth-child(n+2) {
+  .breadcrumbs__item {
     display: none; }
-  .breadcrumbs__item svg:first-child {
+    .breadcrumbs__item_back {
+      display: inline-block; }
+      .breadcrumbs__item_back:before {
+        display: none; }
+  .breadcrumbs__btn-home {
     display: none; }
-  .breadcrumbs__item svg:nth-child(2) {
-    margin-top: 3px;
-    width: 12px;
-    height: 12px;
-    display: block; } }
+  .breadcrumbs__btn-back {
+    display: inline-block; } }
 
 /*========/adaptive======*/
 /*Reset
@@ -2177,7 +2243,8 @@ body.hidden {
 /*=========/service========*/
 /*========Info-box========*/
 .info-box {
-  background-color: #fff; }
+  background-color: #fff;
+  height: 100%; }
   .info-box__photo {
     display: block;
     height: 180px;
