@@ -950,6 +950,65 @@
 }
 /*========/photo-slider======*/
 
+/*=========Sertificats-list=======*/
+.sertificats-list {
+	&__inner {
+		margin-top: 50px;
+	}
+	&__item {
+		display: flex;
+		border-top: 1px solid $op-brown;
+		justify-content: space-between;
+		padding: 20px 0 30px;
+		&:hover {
+			.sertificats-list {
+				&__name, &__data, &__link {
+					color: $red;
+					opacity: 1;
+				}
+			}
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	&__info {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__name {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $bl;
+		line-height: 1.5;
+		margin-right: 20px;
+		transition: all .2s linear;
+		margin-top: 10px;
+	}
+	&__data {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $bl;
+		opacity: 0.4;
+		line-height: 1.5;
+		margin-right: 20px;
+		transition: all .2s linear;
+		margin-top: 10px;
+	}
+	&__link {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $lbrown;
+		line-height: 1.5;
+		transition: all .2s linear;
+		margin-top: 10px;
+	}
+}
+/*=========/sertificats-list=======*/
+
 
 /*========Adaptive======*/
 @media(max-width: 1440px) {
@@ -1069,6 +1128,12 @@
 	.box-nav {
 		&__mobile {
 			display: block;
+		}
+	}
+	.sertificats-list {
+		margin-bottom: 80px;
+		&__info {
+			flex-direction: column;
 		}
 	}
 	.services-box {
@@ -1361,6 +1426,21 @@
 				&:before {
 					left: -35px;
 				}
+			}
+		}
+	}
+}
+@media(max-width: 414px) {
+	.sertificats-list {
+		margin-bottom: 50px;
+		padding: 40px 0;
+		&__inner {
+			margin-top: 30px;
+		}
+		&__item {
+			flex-direction: column;
+			>* {
+				margin-right: 0;
 			}
 		}
 	}
