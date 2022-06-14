@@ -293,39 +293,58 @@ $(document).ready(function() {
   });
   /*==/testimonial__slider==*/
 
+
   /*======/sliders=============*/
+
+/*=======Contact-block (number)======*/
+  $('.contact-block__inner').removeClass('one').addClass(function(){
+    return ["none", "one", "two", "three", "four"]
+       [$(this).children('.contact-block__box').length];
+  });
+/*=======/contact-block (number)======*/
+
+  /*============Progress==========*/
+  var $slider = $('.photo-slider__slider');
+  var $progressBar = $('.progress');
+  var $progressBarLabel = $( '.photo-slider__label' );
+  
+  $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+    var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+    
+    $progressBar
+      .css('background-size', calc + '% 100%')
+      .attr('aria-valuenow', calc );
+    
+    $progressBarLabel.text( calc + '% completed' );
+  });
+  
+  $slider.slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    speed: 400,
+    prevArrow: $('.photo-slider__arrow_prev'),
+    nextArrow: $('.photo-slider__arrow_next'),
+    responsive: [
+      {
+        breakpoint: 861,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 415,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+      ]
+  });
+  /*============/progress==========*/ 
 
 });
 
 
 
-
-
-
-  /*======Popup=============*/
-  $(".about__item").on("click", function() {
-    $(".popup-about").fadeIn();
-    $("body").addClass('hidden');
-  
-  
-      /*==About__slider==*/
-  $('.popup-about__slider').slick({
-    infinite: true,
-    dots: true,
-    draggable: false,
-    swipeToSlide: false,
-    touchMove: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: $('.popup-about .slider-arrows__arrow_prev'),
-    nextArrow: $('.popup-about .slider-arrows__arrow_next'),
-});/*==/about__slider==*/
-  });
-
-   $(".popup-about__close").on("click", function() {
-    $(".popup-about").fadeOut();
-    $("body").removeClass('hidden');
-  });
-
-  /*==========/popup=========*/
 
