@@ -989,6 +989,9 @@
     -webkit-box-shadow: 0px 20px 50px rgba(55, 32, 14, 0.1);
     box-shadow: 0px 20px 50px rgba(55, 32, 14, 0.1); } }
 
+.page_service-consult .services-box .title {
+  max-width: 545px; }
+
 .page_gray-foot .footer__nav {
   background-color: #F9F9F9; }
   .page_gray-foot .footer__nav:before {
@@ -2090,6 +2093,17 @@
 @media (max-width: 765px) {
   .photo-slider {
     padding: 50px 0 40px; }
+  .breadcrumbs__item {
+    display: none; }
+    .breadcrumbs__item_back {
+      display: inline-block;
+      margin-left: 0; }
+      .breadcrumbs__item_back:before {
+        display: none; }
+  .breadcrumbs__btn-home {
+    display: none; }
+  .breadcrumbs__btn-back {
+    display: inline-block; }
   .services-box {
     margin-bottom: 40px; }
     .services-box__nav {
@@ -2240,18 +2254,7 @@
 
 @media (max-width: 376px) {
   .reviews .slick-list {
-    padding-right: 50%; }
-  .breadcrumbs__item {
-    display: none; }
-    .breadcrumbs__item_back {
-      display: inline-block;
-      margin-left: 0; }
-      .breadcrumbs__item_back:before {
-        display: none; }
-  .breadcrumbs__btn-home {
-    display: none; }
-  .breadcrumbs__btn-back {
-    display: inline-block; } }
+    padding-right: 50%; } }
 
 /*========/adaptive======*/
 /*Reset
