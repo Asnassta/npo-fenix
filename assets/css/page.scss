@@ -257,6 +257,33 @@
 	}
 }/*==/header==*/
 
+.bg {
+	&-gray {
+		background-color: $gray;
+	}
+	&-line {
+		padding: 80px 0 100px;
+		position: relative;
+		&:after {
+			content: "";
+			width: 200px;
+			height: 100%;
+			background-color: $wh;
+			position: absolute;
+			top: 0;
+			z-index: 1;
+		}
+		&_right {
+			&:after {
+				right: 0;
+			}
+		}
+		&_left {
+			left: 0;
+		}
+	}
+}
+
 /*===Stat===*/
 .stat {
 	&__data {

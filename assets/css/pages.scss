@@ -1141,12 +1141,16 @@
 		.title {
 			max-width: 650px;
 		}
-		&_inner {
+		&__inner {
 			display: block;
 		}
 		&__info {
 			width: 100%;
 			margin-right: 0;
+		}
+		&__nav {
+			width: 100%;
+			margin-top: 50px;
 		}
 	}
 	.list-block {
@@ -1244,6 +1248,9 @@
 	}
 	.services-box {
 		margin-bottom: 40px;
+		&__nav {
+			margin-top: 30px;
+		}
 	}
 	.contact-block {
 		&__inner {
