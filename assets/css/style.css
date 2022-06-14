@@ -2116,47 +2116,52 @@
     display: none; }
     .text-more__btn {
       display: inline-block; }
-  .about__photo {
-    margin-top: 30px; }
-  .about .slick-dots {
-    bottom: 30px; }
-    .about .slick-dots button {
-      width: 25px; }
+  .about {
+    padding-bottom: 50px; }
+    .about__photo {
+      margin-top: 30px; }
+    .about .slick-dots {
+      bottom: 30px; }
+      .about .slick-dots button {
+        width: 25px; }
   .list-product__inner {
+    margin-top: 30px;
     display: block;
     margin-left: 0; }
     .list-product__inner > * {
       width: 100%;
       margin-left: 0; }
-  .sertificats__inner {
-    display: block;
-    position: relative;
-    padding-bottom: 90px; }
-  .sertificats__info {
-    width: 100%;
-    padding: 0;
-    position: static; }
-    .sertificats__info:before {
-      display: none; }
-  .sertificats__slider {
-    width: 100%;
-    padding-right: 30%;
-    margin: 30px 0 0 0;
-    position: relative; }
-    .sertificats__slider:before {
-      content: "";
-      width: 10px;
-      height: 100%;
-      background-color: #fff;
+  .sertificats {
+    padding: 40px 0 50px; }
+    .sertificats__inner {
+      display: block;
+      position: relative;
+      padding-bottom: 90px; }
+    .sertificats__info {
+      width: 100%;
+      padding: 0;
+      position: static; }
+      .sertificats__info:before {
+        display: none; }
+    .sertificats__slider {
+      width: 100%;
+      padding-right: 30%;
+      margin: 30px 0 0 0;
+      position: relative; }
+      .sertificats__slider:before {
+        content: "";
+        width: 10px;
+        height: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: -20px;
+        z-index: 1; }
+    .sertificats .slider-arrows {
       position: absolute;
-      top: 0;
-      left: -20px;
+      left: 0;
+      bottom: 0;
       z-index: 1; }
-  .sertificats .slider-arrows {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 1; }
   .popup-about__buttons {
     bottom: auto;
     top: 20px;
@@ -2168,6 +2173,7 @@
     left: 20px;
     bottom: 50px; }
   .reviews {
+    padding-top: 40px;
     padding-bottom: 140px;
     position: relative; }
     .reviews .slider-arrows {
