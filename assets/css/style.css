@@ -1631,7 +1631,8 @@
       margin-left: 30px;
       margin-bottom: 30px; }
   .services .info-box {
-    background-color: #F9F9F9; }
+    background-color: #F9F9F9;
+    height: 100%; }
 
 /*=======/services=======*/
 /*=======Services-box======*/
@@ -1688,11 +1689,11 @@
       color: #983031; }
     .box-nav__item.active:before {
       content: "";
-      width: 15px;
-      height: 30px;
+      width: 16px;
+      height: 31px;
       background: url("../images/icons/arrow-strong.svg") center no-repeat;
       position: absolute;
-      left: -54px;
+      left: -55px;
       z-index: 1;
       top: 50%;
       -webkit-transform: translateY(-50%);
@@ -2167,12 +2168,12 @@
     left: 20px;
     bottom: 50px; }
   .reviews {
-    padding-bottom: 90px;
+    padding-bottom: 140px;
     position: relative; }
     .reviews .slider-arrows {
       position: absolute;
       left: 20px;
-      bottom: 0;
+      bottom: 50px;
       z-index: 1; }
     .reviews__slide {
       padding-top: 30px; }
@@ -2744,8 +2745,7 @@ body.hidden {
 /*=========/service========*/
 /*========Info-box========*/
 .info-box {
-  background-color: #fff;
-  height: 100%; }
+  background-color: #fff; }
   .info-box__photo {
     display: block;
     height: 180px;

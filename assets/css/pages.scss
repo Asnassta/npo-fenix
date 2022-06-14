@@ -692,6 +692,7 @@
 	}
 	.info-box {
 		background-color: $gray;
+		height: 100%;
 	}
 }
 /*=======/services=======*/
@@ -758,11 +759,11 @@
 			}
 			&:before {
 				content: "";
-				width: 15px;
-				height: 30px;
+				width: 16px;
+				height: 31px;
 				background: url("../images/icons/arrow-strong.svg") center no-repeat;
 				position: absolute;
-				left: -54px;
+				left: -55px;
 				z-index: 1;
 				@include abs-centerY;
 			}
@@ -1367,12 +1368,12 @@
 		}
 	}
 	.reviews {
-		padding-bottom: 90px;
+		padding-bottom: 140px;
 		position: relative;
 		.slider-arrows {
 			position: absolute;
 			left: 20px;
-			bottom: 0;
+			bottom: 50px;
 			z-index: 1;
 		}
 		&__slide {
