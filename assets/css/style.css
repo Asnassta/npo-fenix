@@ -2584,7 +2584,8 @@ body.hidden {
 
 .wrapper {
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  background-color: #fff; }
 
 .title-box {
   position: relative;
