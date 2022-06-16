@@ -2582,9 +2582,6 @@ h1, h2, h3, h4, h5, h6 {
 body.hidden {
   overflow: hidden; }
 
-.main {
-  background-color: #fff; }
-
 .wrapper {
   overflow: hidden;
   position: relative; }
