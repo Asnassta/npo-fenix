@@ -11,6 +11,11 @@
 <body>
 	<!--Sprite-->
 	<svg style="display: none;">
+		<symbol id="arrow-unline_2" viewBox="0 0 14 25">
+			<g>
+				<path d="M12.7333 24.7773C13.0214 24.7779 13.2553 24.5447 13.2559 24.2567C13.2561 24.1178 13.2009 23.9845 13.1026 23.8864L1.99571 12.7806L13.1026 1.67476C13.3066 1.47079 13.3066 1.14013 13.1026 0.936174C12.8986 0.732213 12.568 0.732213 12.364 0.936174L0.888865 12.4113C0.685246 12.615 0.685246 12.9452 0.888865 13.1489L12.364 24.624C12.4618 24.7221 12.5947 24.7773 12.7333 24.7773Z"/>
+			</g>
+		</symbol>
 		<symbol id="arrow-unline" viewBox="0 0 8 12">
 			<g>
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M2.27624 6.00005L7.13817 10.862L6.19536 11.8048L0.390625 6.00005L6.19536 0.195312L7.13817 1.13812L2.27624 6.00005Z"/>
@@ -73,7 +78,7 @@
 		</symbol>
 	</svg>
 
-	<div class="wrapper page page_service page_gray-foot">
+	<div class="wrapper page page_service-consult page_gray-foot">
 		<!--Header-->
 		<header class="header" id="header">
 			<div class="header__menu">
@@ -355,88 +360,46 @@
 							</a>
 						</div>
 						<div class="breadcrumbs__links">
-							<a href="index.html" class="breadcrumbs__item breadcrumbs__item_back">
+							<a href="index.html" class="breadcrumbs__item">
 								<span>Главная</span>
 							</a>
-							<a href="#" class="breadcrumbs__item active">
+							<a href="#" class="breadcrumbs__item breadcrumbs__item_back">
 								<span>Услуги</span>
+							</a>
+							<a href="#" class="breadcrumbs__item active">
+								<span>Консультационные услуги для предприятий и литейных производств</span>
 							</a>
 						</div>
 					</div><!--/breadcrumbs-->
 				</div>
 			</div><!--/page__header-->
-			<section class="services">
+			<section class="services-box">
 				<div class="container">
-					<div class="title-box">
-						<h2 class="title">Наши услуги</h2>
-					</div>
-					<div class="services__inner">
-						<div class="services__item">
-							<div class="info-box">
-								<a href="#" class="info-box__photo">
-									<img src="assets/images/delivery.png" alt="">
-								</a>
-								<div class="info-box__info">
-									<div>
-										<div class="info-box__title">
-											<a href="#">Доставка продукции собственным автотранспортом</a>
-										</div>
-										<div class="info-box__description">ООО НПО «Феникс» предоставляет услуги по доставке продукции до покупателя. Мы беспечиваем оперативную доставку нашей</div>
-									</div>
-									<a href="#" class="info-box__link">
-										<span>Подробнее</span>
-										<svg>
-											<use xlink:href="#arrow"></use>
-										</svg>
-									</a>
-								</div>
-							</div><!--/info-box-->
-						</div>
-						<div class="services__item">
-							<div class="info-box">
-								<a href="#" class="info-box__photo info-box__photo_logo">
-									<img src="assets/images/consult.png" alt="">
-								</a>
-								<div class="info-box__info">
-									<div>
-										<div class="info-box__title">
-											<a href="#">Консультационные услуги для предприятий и литейных производств</a>
-										</div>
-										<div class="info-box__description">Консультационные услуги для предприятий горячего цинкования и литейных производств</div>
-									</div>
-									<a href="#" class="info-box__link">
-										<span>Подробнее</span>
-										<svg>
-											<use xlink:href="#arrow"></use>
-										</svg>
-									</a>
-								</div>
+					<div class="services-box__inner">
+						<div class="services-box__info">
+							<div class="title-box">
+								<h2 class="title">Консультационные услуги для предприятий и литейных производств</h2>
+							</div>
+							<div class="description">
+								<p>ООО НПО «Феникс» имеет в наличии высококлассных специалистов, которые могут помочь Вам при открытии собственного производства горячего цинкования. Наши специалисты имеют огромный опыт работы и обучат ваших сотрудников.</p>
+								<p>Мы снабдим ваше производство необходимыми материалами.</p>
 							</div>
 						</div>
-						<div class="services__item">
-							<div class="info-box">
-								<a href="#" class="info-box__photo">
-									<img src="assets/images/labor.png" alt="">
-								</a>
-								<div class="info-box__info">
-									<div>
-										<div class="info-box__title">
-											<a href="#">Лабораторное исследование металлов и сплавов</a>
-										</div>
-										<div class="info-box__description">Наша компания предлагает услуги по определению химического состава черных и цветных металлов и сплавов.</div>
-									</div>
-									<a href="#" class="info-box__link">
-										<span>Подробнее</span>
-										<svg>
-											<use xlink:href="#arrow"></use>
-										</svg>
-									</a>
-								</div>
+						<div class="services-box__nav box-nav">
+							<h3 class="box-nav__title">Оказываем услуги</h3>
+							<div class="box-nav__item">
+								<a href="#">Лабораторное исследование металлов и сплавов</a>
+							</div>
+							<div class="box-nav__item">
+								<a href="#">Доставка продукции собственным автотранспортом</a>
+							</div>
+							<div class="box-nav__item active">
+								<a href="#">Консультационные услуги для предприятий и литейных производств</a>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section><!--/services-->
+			</section><!--/services-box-->
 		</main>
 
 		<footer class="footer">
