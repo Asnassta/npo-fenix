@@ -28,6 +28,7 @@ html,body{
 	line-height: 1;
 	font-size: 16px;
 	color: $bl;
+	background-color: $wh;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -60,6 +61,10 @@ body {
 	&.hidden {
 		overflow: hidden;
 	}
+}
+
+.main {
+	background-color: $wh;
 }
 
 .wrapper {
@@ -170,10 +175,16 @@ body {
 			fill: $bl;
 			transition: all .2s linear;
 		}
+		&:hover {
+				background-color: $lbrown;
+				svg {
+					fill: $wh;
+				}
+			}
 		&_prev {
-			background-color: $lbrown;
+			//background-color: $lbrown;
 			svg {
-				fill: $wh;
+				//fill: $wh;
 				transform: rotate(180deg);
 			}
 			/*&:hover {
@@ -181,26 +192,39 @@ body {
 				svg {
 					fill: $lbrown;
 				}
+				svg {
+					transform: rotate(180deg) translateX(5px);
+				}
 			}*/
 		}
-		&_next {
-			/*&:hover {
+		/*&_next {
+			&:hover {
 				background-color: $lbrown;
 				svg {
 					fill: $bl;
 				}
-			}*/
-		}
-		&:hover {
-			opacity: 0.9;
-		}
+				svg {
+					transform: translateX(5px);
+				}
+			}
+		}*/
 	}
 	&_big {
+		.slider-arrows__arrow {
+			&:hover {
+				opacity: 0.9;
+			}
+		}
 		.slider-arrows__arrow_prev {
 			padding: 32.5px 34.5px;
 			background-color: $wh;
 			svg {
 				fill: $lbrown;
+			}
+			&:hover {
+				svg {
+					transform: rotate(180deg) translateX(5px);
+				}
 			}
 		}
 		.slider-arrows__arrow_next {
@@ -212,6 +236,11 @@ body {
 				fill: $wh;
 				&:nth-child(2) {
 					display: none;
+				}
+			}
+			&:hover {
+				svg {
+					transform: translateX(5px);
 				}
 			}
 		}
@@ -315,6 +344,22 @@ body {
 /*========Product========*/
 .product {
 	padding: 90px 0 100px;
+	position: relative;
+	&:after {
+		content: "";
+		width: 22%;
+		height: 100%;
+		background: linear-gradient(270deg, #FFFFFF 0%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 100;
+		pointer-events: none;
+		@media(min-width: 2600px) {
+			width: 30%;
+			background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0) 100%);
+		}
+	}
 	.slick-list {
 		overflow: visible;
 	}
@@ -366,7 +411,6 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		//background: linear-gradient(360deg, rgba(43, 50, 60, 0.9) 29.13%, rgba(43, 50, 60, 0) 98.03%);
 		transition: all .3s linear;
 		&:before {
 			content: "";
@@ -375,9 +419,9 @@ body {
 			position: absolute;
 			top: 0;
 			left: 0;
-			z-index: 1;
+			z-index: 3;
 			background: linear-gradient(360deg, rgba(43, 50, 60, 0.9) 29.13%, rgba(43, 50, 60, 0) 98.03%);
-			opacity: 1;
+			opacity: 2;
 			transition: all .2s linear;
 		}
 		&:after {
@@ -387,13 +431,12 @@ body {
 			position: absolute;
 			top: 0;
 			left: 0;
-			z-index: -1;
+			z-index: 2;
 			background: linear-gradient(360deg, rgba(152, 48, 49, 0.9) 29.13%, rgba(152, 48, 49, 0.9) 98.03%);
 			opacity: 0;
 			transition: all .3s linear;
 		}
 		&:hover {
-			//background: none;
 			margin-top: -20px;
 			height: 400px;
 			&:after {
@@ -409,7 +452,7 @@ body {
 			position: absolute;
 			top: 0;
 			left: 0;
-			z-index: -1;
+			z-index: 1;
 			img {
 				width: 100%;
 				height: 100%;
@@ -479,8 +522,11 @@ body {
 	.info-box {
 		height: 100%;
 	}
-	.slider-arrows__arrow_next {
+	.slider-arrows__arrow {
 		background-color: $wh;
+		&:hover {
+			background-color: $lbrown;
+		}
 	}
 }
 /*=========/service========*/
@@ -569,7 +615,11 @@ body {
 			transition: all .2s linear;
 		}
 		&:hover {
+			span {
+				color: $red;
+			}
 			svg {
+				fill: $red;
 				transform: translateX(5px);
 			}
 		}
@@ -713,11 +763,6 @@ body {
 
 /*=======Adaptive======*/
 @media(max-width: 1600px) {
-	.bg-line {
-		&:after {
-			width: 5%;
-		}
-	}
 	.intro {
 		.title {
 			&-box {
@@ -725,13 +770,6 @@ body {
 					left: -79px;
 				}
 			}
-		}
-	}
-}
-@media(max-width: 1300px) {
-	.bg-line {
-		&:after {
-			display: none;
 		}
 	}
 }
@@ -746,6 +784,9 @@ body {
 }
 @media(max-width: 992px) {
 	.product {
+		&:after {
+			display: none;
+		}
 		&__slider {
 			width: calc(60% + 100px);
 			margin-right: -100px;

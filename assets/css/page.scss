@@ -7,6 +7,7 @@
 	&__stat {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
 		margin-bottom: 16px;
 	}
 	&__info {
@@ -72,9 +73,9 @@
 				transition: all .2s linear;
 			}
 			&:hover {
-				background-color: $wh;
+				background-color: #4A494A;
 				svg {
-					fill: $lbrown;
+					fill: $wh;
 				}
 			}
 			&_stroke {
@@ -85,7 +86,7 @@
 				&:hover {
 					svg {
 						fill: none;
-						stroke: $lbrown;
+						stroke: $wh;
 					}
 				}
 			}
@@ -93,7 +94,7 @@
 	}/*==/header-social==*/
 	&-lang {
 		display: inline-block;
-		background: rgba(191, 157, 119, 0.2);
+		background: $lbrown;
 		padding: 3px 22px 3px 9px;
 		position: relative;
 		cursor: pointer;
@@ -117,6 +118,7 @@
 			transition: all .3s linear;
 		}
 		&.active {
+			background-color: #4A494A;
 			&:after {
 				transform: translateY(-50%) rotate(180deg);
 			}
@@ -128,7 +130,7 @@
 			left: 0;
 			z-index: 1;
 			width: 100%;
-			background: rgba(191, 157, 119, 0.2);
+			background: #4A494A;
 			a {
 				display: block;
 				font-family: $ff;
@@ -139,7 +141,7 @@
 				padding: 3px 9px;
 				transition: all .2s linear;
 				&:hover {
-					background: rgba(191, 157, 119, 0.5);
+					background: $lbrown;
 				}
 			}
 		}
@@ -266,12 +268,15 @@
 		position: relative;
 		&:after {
 			content: "";
-			width: 200px;
+			width: 10.5%;
 			height: 100%;
 			background-color: $wh;
 			position: absolute;
 			top: 0;
 			z-index: 1;
+			@media(min-width: 2500px) {
+				width: 15%;
+			}
 		}
 		&_right {
 			&:after {
@@ -573,7 +578,7 @@
 		padding-left: 1px;
 		&:before {
 			content: "";
-			width: 100%;
+			width: 1000%;
 			height: 100%;
 			background-color: $wh;
 			position: absolute;
@@ -596,7 +601,7 @@
 		position: relative;
 		&:before {
 			content: "";
-			width: 1000%;
+			width: 10000%;
 			height: 100%;
 			background-color: $gray;
 			position: absolute;
@@ -609,42 +614,41 @@
 		}
 	}
 	&-logo {
+		display: flex;
+		align-items: center;
 		&__title {
-			display: flex;
-			align-items: center;
 			text-transform: uppercase;
+			margin-left: 20px;
 			img {
-				width: 44.63px;
-				height: 49.09px;
+				width: 69.72px;
+				height: 77.46px;
 			}
 			span {
 				font-family: $ff;
-				font-size: 52px;
+				font-size: 45px;
 				font-weight: 900;
 				color: $red;
-				display: inline-block;
-				margin-left: 11px;
+				display: block;
+				&:nth-child(2) {
+					font-family: $ff;
+					font-size: 8px;
+					font-weight: 400;
+					color: $bl;
+				}
 			}
-		}
-		&__subtitle {
-			font-family: $ff;
-			font-size: 13px;
-			font-weight: 400;
-			color: $bl;
-			line-height: 1.5;
-			letter-spacing: 0.05em;
 		}
 	}
 	&__burger {
 		display: none;
 		width: 49px;
 		height: 49px;
+		flex: 0 0 49px;
 		background-color: $red;
 		justify-content: center;
 		align-items: center;
 		cursor: pointer;
 		transition: all .2s linear;
-		margin-left: 25px;
+		margin-left: 49px;
 		svg {
 			width: 29.4px;
 			height: 29.4px;
@@ -800,6 +804,20 @@
 
 
 /*========Adaptive==========*/
+@media(max-width: 1600px) {
+	.bg-line {
+		&:after {
+			width: 5%;
+		}
+	}
+}
+@media(max-width: 1400px) {
+	.bg-line {
+		&:after {
+			display: none;
+		}
+	}
+}
 @media(max-width: 1200px) {
 	.mobile-menu {
 		display: block;
@@ -812,6 +830,14 @@
 			&:before {
 				display: none;
 			}
+		}
+	}
+	.stat__item {
+		&:nth-child(n+7) {
+			display: none;
+		}
+		&:nth-child(6) {
+			margin-right: 0;
 		}
 	}
 	.footer {
@@ -873,17 +899,18 @@
 @media(max-width: 1200px) and (min-width: 766px) {
 	.footer {
 		&-logo {
-			&__title {
-				img {
-					width: 33.22px;
-					height: 36.55px;
-				}
-				span {
-					font-size: 39px;
-				}
+			img {
+				width: 44.87px;
+				height: 49.86px;
 			}
-			&__subtitle {
-				font-size: 9.7px;
+			&__title {
+				margin-left: 12px;
+				span {
+					font-size: 29.29px;
+					&:nth-child(2) {
+						font-size: 5.3px;
+					}
+				}
 			}
 		}
 	}

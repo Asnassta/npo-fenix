@@ -27,6 +27,13 @@ $(document).ready(function() {
   });
   /*==========/text-more=========*/
 
+    /*======Vacancy-toggle=============*/
+  $(".vacancy__header").on("click", function() {
+    $(this).toggleClass("active");
+    $(this).next().slideToggle();
+  });
+  /*==========/vacancy-toggle=========*/
+
   /*=========Smooth scroll=============*/
   $("[data-scroll]").on("click", function(event) {
   event.preventDefault();
