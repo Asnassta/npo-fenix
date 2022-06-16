@@ -300,6 +300,40 @@ $(document).ready(function() {
   });
   /*==/testimonial__slider==*/
 
+     /*==Supply__slider==*/
+  $('.supply__slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: false,
+      responsive: [
+      {
+        breakpoint: 415,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      ]
+  });/*==/supply__slider==*/
+
+       /*==header__stat==*/
+  $('.header__stat').slick({
+      infinite: true,
+      slidesToShow: 9,
+      slidesToScroll: 2,
+      arrows: false,
+      variableWidth: true,
+      responsive: [
+      {
+        breakpoint: 1251,
+        settings: {
+          variableWidth: true,
+          slidesToShow: 1,
+        }
+      },
+      ]
+  });/*==/header__stat==*/
+
 
   /*======/sliders=============*/
 

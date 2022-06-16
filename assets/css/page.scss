@@ -6,7 +6,6 @@
 	}
 	&__stat {
 		display: flex;
-		flex-wrap: wrap;
 		justify-content: space-between;
 		margin-bottom: 16px;
 	}
@@ -98,6 +97,7 @@
 		padding: 3px 22px 3px 9px;
 		position: relative;
 		cursor: pointer;
+		transition: all .2s linear;
 		span {
 			font-family: $ff;
 			font-size: 12px;
@@ -116,6 +116,9 @@
 			z-index: 1;
 			transform: translateY(-50%);
 			transition: all .3s linear;
+		}
+		&:hover {
+			background-color: #4A494A;
 		}
 		&.active {
 			background-color: #4A494A;
@@ -299,13 +302,19 @@
 		line-height: 1.5;
 	}
 	&__item {
-		margin-right: 16px;
+		//margin-right: 16px;
 		margin-bottom: 2px;
-		display: flex;
+		display: flex!important;
 		align-items: center;
 		&:last-child {
 			margin-right: 0;
 		}
+	}
+	.slick-list {
+		margin-right: -16px;
+	}
+	.slick-slide {
+		margin-right: 16px;
 	}
 	&__desc {
 		font-family: $ff;
@@ -314,6 +323,7 @@
 		color: $lbrown;
 		line-height: 1.5;
 		margin-right: 3px;
+		white-space: nowrap;
 	}
 	&__info {
 		font-family: $ff;
@@ -322,6 +332,7 @@
 		color: $wh;
 		line-height: 1.5;
 		margin-right: 3px;
+		white-space: nowrap;
 	}
 	&__icon {
 		padding-top: 2px;
@@ -818,13 +829,19 @@
 		}
 	}
 }
-@media(max-width: 1350px) {
-	.stat__item {
-		&:nth-child(n+8) {
-			display: none;
-		}
-		&:nth-child(7) {
-			margin-right: 0;
+@media(max-width: 1250px) {
+	.stat {
+		overflow: hidden;
+		position: relative;
+		&:after {
+			content: "";
+			width: 40px;
+			height: 100%;
+			background: linear-gradient(270deg, #2B323C 0%, #2B323C 0%, rgba(43, 50, 60, 0) 100%);
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 10;
 		}
 	}
 }
@@ -897,14 +914,6 @@
 			}
 		}
 	}
-	.stat__item {
-		&:nth-child(n+7) {
-			display: none;
-		}
-		&:nth-child(6) {
-			margin-right: 0;
-		}
-	}
 }
 @media(max-width: 1200px) and (min-width: 766px) {
 	.footer {
@@ -959,14 +968,6 @@
 			justify-content: space-between;
 		}
 	}
-	.stat__item {
-		&:nth-child(n+6) {
-			display: none;
-		}
-		&:nth-child(5) {
-			margin-right: 0;
-		}
-	}
 }
 @media(max-width: 765px) {
 	.header {
@@ -974,7 +975,7 @@
 			padding: 6.5px 0;
 		}
 		&__stat {
-			display: none;
+			display: none!important;
 		}
 		&__info {
 			&-block {

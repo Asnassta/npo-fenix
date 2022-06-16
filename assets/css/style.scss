@@ -566,6 +566,8 @@ body {
 		padding-bottom: 20px;
 		margin-bottom: 20px;
 		position: relative;
+		display: block;
+		transition: all .2s linear;
 		&:before {
 			content: "";
 			width: 55px;
@@ -576,12 +578,8 @@ body {
 			left: 0;
 			z-index: 1;
 		}
-		a {
-			color: $bl;
-			transition: all .2s linear;
-			&:hover {
-				color: $lbrown;
-			}
+		&:hover {
+			color: $lbrown;
 		}
 	}
 	&__description {
@@ -679,6 +677,13 @@ body {
 				color: $lbrown;
 			}
 		}
+		&-main {
+			font-size: 24px;
+			font-weight: 900;
+			padding-bottom: 20px;
+			border-bottom: 1px solid $lbrown;
+			margin-bottom: 20px;
+		}
 	}
 }
 /*======/info-sidebar=====*/
@@ -753,6 +758,18 @@ body {
 	.info-box {
 		&__info {
 			padding-bottom: 30px;
+		}
+	}
+	&-page {
+		margin-bottom: 50px;
+		.info-box {
+			background-color: $gray;
+		}
+		.blog__inner {
+			margin-bottom: -30px;
+			>* {
+				margin-bottom: 30px;
+			}
 		}
 	}
 }
@@ -857,6 +874,20 @@ body {
 			width: 100%;
 			padding-left: 0;
 			margin-top: 40px;
+		}
+		&-page {
+			.blog__inner {
+				margin-bottom: -12px;
+				>* {
+					margin-bottom: 12px;
+				}
+			}
+		}
+	}
+	.info-sidebar {
+		&__item {
+			padding-bottom: 20px;
+			margin-bottom: 20px;
 		}
 	}
 }
@@ -1061,6 +1092,7 @@ body {
 	}
 	.blog {
 		&__inner {
+			margin-top: 30px;
 			margin-left: 0;
 			>* {
 				margin-left: 0;
@@ -1069,6 +1101,9 @@ body {
 					margin-bottom: 12px;
 				}
 			}
+		}
+		&-page {
+			margin-bottom: 30px;
 		}
 	}
 }
