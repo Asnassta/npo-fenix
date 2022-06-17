@@ -538,17 +538,15 @@
 			padding: 8px 30px 8px 15px;
 			span {
 				font-size: 16px;
-				color: $lbrown;
 			}
 			&:after {
 				width: 16px;
 				height: 16px;
-				background: url("../images/icons/chevron-bottom_brown.svg") center no-repeat;
+				background: url("../images/icons/chevron-bottom.svg") center no-repeat;
 			}
 			&__dropdown {
 				a {
 					font-size: 16px;
-					color: $lbrown;
 					padding: 8px 15px;
 				}
 			}

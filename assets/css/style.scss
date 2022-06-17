@@ -101,6 +101,9 @@ body {
 	font-weight: 900;
 	color: $lbrown;
 	line-height: 1.5;
+	&_red {
+		color: $red;
+	}
 }
 
 .description {
@@ -705,17 +708,8 @@ body {
 		margin-top: 45px;
 	}
 	&__slider {
-		/*display: flex;
-		flex-wrap: wrap;
-		margin-right: -30px;
-		margin-bottom: -30px;*/
 		width: calc(100% - 400px);
 	}
-	/*&__slide {
-		margin-right: 30px;
-		margin-bottom: 30px;
-		width: calc(33.33333% - 30px);
-	}*/
 	.slick-list {
 		margin-right: -30px;
 		margin-bottom: -30px;
@@ -735,6 +729,11 @@ body {
 		border: 1px solid rgba(43, 50, 60, 0.2);
 		img {
 			max-width: 100%;
+		}
+		&_top {
+			img {
+				margin-bottom: 12px;
+			}
 		}
 	}
 }
