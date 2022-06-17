@@ -639,8 +639,9 @@
 				color: $red;
 				display: block;
 				&:nth-child(2) {
+					text-transform: none;
 					font-family: $ff;
-					font-size: 8px;
+					font-size: 9.6px;
 					font-weight: 400;
 					color: $bl;
 				}
@@ -925,7 +926,7 @@
 				span {
 					font-size: 29.29px;
 					&:nth-child(2) {
-						font-size: 5.3px;
+						font-size: 6.2px;
 					}
 				}
 			}
