@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<title>Феникс</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="arrow-unline_2" viewBox="0 0 14 25">
+			<g>
+				<path d="M12.7333 24.7773C13.0214 24.7779 13.2553 24.5447 13.2559 24.2567C13.2561 24.1178 13.2009 23.9845 13.1026 23.8864L1.99571 12.7806L13.1026 1.67476C13.3066 1.47079 13.3066 1.14013 13.1026 0.936174C12.8986 0.732213 12.568 0.732213 12.364 0.936174L0.888865 12.4113C0.685246 12.615 0.685246 12.9452 0.888865 13.1489L12.364 24.624C12.4618 24.7221 12.5947 24.7773 12.7333 24.7773Z"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-unline" viewBox="0 0 8 12">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M2.27624 6.00005L7.13817 10.862L6.19536 11.8048L0.390625 6.00005L6.19536 0.195312L7.13817 1.13812L2.27624 6.00005Z"/>
+			</g>
+		</symbol>
+		<symbol id="plus-icon" viewBox="0 0 16 16">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M9 7H14V9H9V14H7V9H2V7H7V2H9V7Z"/>
+			</g>
+		</symbol>
+		<symbol id="minus-icon" viewBox="0 0 12 2">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2V0H12V2H0Z"/>
+			</g>
+		</symbol>
+		<symbol id="home" viewBox="0 0 16 14">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M3.92513 5.66683L7.92602 1.66594L11.9269 5.66683H11.926V12.3335H3.92603V5.66683H3.92513ZM2.59269 6.99926L1.60815 7.98381L0.666016 7.04168L6.98401 0.723689C7.50426 0.203432 8.34777 0.203432 8.86803 0.723689L15.186 7.04168L14.2439 7.98381L13.2594 6.99929V12.3335C13.2594 13.0699 12.6624 13.6668 11.926 13.6668H3.92603C3.18965 13.6668 2.59269 13.0699 2.59269 12.3335V6.99926Z"/>
+			</g>
+		</symbol>
+		<symbol id="arrow" viewBox="0 0 16 16">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M11.7239 8.66672H2V7.33338H11.7239L7.5286 3.13812L8.47141 2.19531L14.2761 8.00005L8.47141 13.8048L7.5286 12.862L11.7239 8.66672Z"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-small" viewBox="0 0 13 12">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M6.62309 2.70718V11.0001H5.62309V2.70718L2.47664 5.85363L1.76953 5.14652L6.12309 0.792969L10.4766 5.14652L9.76953 5.85363L6.62309 2.70718Z"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-long" viewBox="0 0 80 17">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M75.7239 9.4714H2V8.13807H75.7239L71.5286 3.94281L72.4714 3L78.2761 8.80474L72.4714 14.6095L71.5286 13.6667L75.7239 9.4714Z"/>
+			</g>
+		</symbol>
+		<symbol id="vk-icon" viewBox="0 0 13 7">
+			<g>
+				<path d="M12.8792 6.28082C12.8792 6.23288 12.8275 6.23288 12.8275 6.18493C12.6206 5.80137 12.1551 5.32192 11.5344 4.79452C11.2241 4.5548 11.0689 4.36301 10.9655 4.26712C10.8103 4.07534 10.8103 3.93151 10.862 3.73973C10.9137 3.59589 11.1206 3.35616 11.4827 2.92465C11.6896 2.68493 11.793 2.5411 11.9482 2.39726C12.7241 1.43836 13.0861 0.815065 12.9827 0.527393L12.931 0.479452C12.8793 0.431507 12.8275 0.383563 12.7241 0.383563C12.6206 0.335618 12.4655 0.335618 12.3103 0.383563H10.3448C10.2931 0.383563 10.293 0.383563 10.1896 0.383563C10.1379 0.383563 10.0862 0.383563 10.0862 0.383563H10.0344H9.98271L9.93098 0.431504C9.87926 0.479449 9.87926 0.479448 9.87926 0.527393C9.67236 1.05479 9.41374 1.4863 9.15512 1.96575C8.99995 2.20548 8.84478 2.44521 8.68961 2.63699C8.53444 2.82877 8.43099 2.9726 8.32754 3.06849C8.22409 3.16438 8.12064 3.21233 8.06892 3.30822C8.0172 3.35616 7.91375 3.40411 7.91375 3.35617C7.86203 3.35617 7.8103 3.35616 7.8103 3.30822C7.75858 3.26027 7.70686 3.21233 7.65513 3.16438C7.60341 3.11644 7.6034 3.02055 7.55168 2.92465C7.55168 2.82876 7.55168 2.73287 7.55168 2.68493C7.55168 2.63698 7.55168 2.49315 7.55168 2.39726C7.55168 2.25343 7.55168 2.15753 7.55168 2.10959C7.55168 1.96575 7.55168 1.77398 7.55168 1.58219C7.55168 1.39041 7.55168 1.24657 7.55168 1.15068C7.55168 1.05479 7.55168 0.910958 7.55168 0.815068C7.55168 0.671232 7.55168 0.575338 7.55168 0.527393C7.55168 0.479448 7.49997 0.38356 7.49997 0.335615C7.44825 0.28767 7.39651 0.239723 7.34479 0.191778C7.29306 0.143833 7.18962 0.143834 7.1379 0.095889C6.87928 0.0479438 6.56894 0 6.20687 0C5.37929 0 4.81033 0.0479467 4.60343 0.143837C4.49998 0.191782 4.39653 0.239725 4.34481 0.335615C4.24136 0.431506 4.24136 0.479452 4.29308 0.479452C4.5517 0.527398 4.7586 0.623284 4.86205 0.767119L4.91378 0.863016C4.9655 0.910961 4.96549 1.00685 5.01721 1.15068C5.06894 1.29452 5.06894 1.43835 5.06894 1.63014C5.06894 1.91781 5.06894 2.20548 5.06894 2.39726C5.06894 2.63699 5.01721 2.78082 5.01721 2.92465C5.01721 3.06849 4.9655 3.16438 4.91378 3.21233C4.86205 3.30822 4.86205 3.35617 4.81032 3.35617C4.81032 3.35617 4.81032 3.40411 4.75859 3.40411C4.70687 3.40411 4.65515 3.45206 4.5517 3.45206C4.49998 3.45206 4.39653 3.40411 4.34481 3.35617C4.24136 3.30822 4.13791 3.21233 4.08619 3.11644C3.98274 3.02055 3.87929 2.87671 3.77584 2.68493C3.6724 2.49315 3.51722 2.30137 3.41377 2.0137L3.31033 1.82192C3.25861 1.72603 3.15516 1.53425 3.05171 1.29452C2.94827 1.05479 2.84481 0.863016 2.74137 0.62329C2.68964 0.527399 2.63793 0.479449 2.5862 0.431504H2.53447C2.53447 0.431504 2.48274 0.383563 2.43102 0.383563C2.3793 0.383563 2.32758 0.335615 2.27586 0.335615H0.413793C0.206897 0.335615 0.103451 0.383559 0.051727 0.431504L0 0.479452C0 0.479452 0 0.527396 0 0.575341C0 0.623287 3.1562e-06 0.671229 0.051727 0.767119C0.310346 1.34246 0.620688 1.91781 0.931031 2.49315C1.24137 3.02055 1.55172 3.5 1.75862 3.83562C2.01724 4.17124 2.22413 4.50685 2.48275 4.79452C2.74137 5.08219 2.89654 5.27397 2.94826 5.36986C3.05171 5.46576 3.10343 5.5137 3.15515 5.56164L3.31033 5.70548C3.41378 5.80137 3.56895 5.94521 3.77584 6.08904C3.98274 6.23288 4.24136 6.37671 4.49998 6.52055C4.75859 6.66438 5.06894 6.76028 5.37929 6.85617C5.74135 6.95206 6.05169 7 6.36204 6.95206H7.1379C7.29307 6.95206 7.39652 6.90411 7.49997 6.80822L7.55168 6.76027C7.55168 6.71233 7.60341 6.71233 7.60341 6.66438C7.60341 6.61644 7.60341 6.5685 7.60341 6.47261C7.60341 6.28083 7.60341 6.13699 7.65513 5.99315C7.70686 5.84932 7.70686 5.75343 7.75859 5.65754C7.81031 5.56165 7.86203 5.5137 7.91375 5.46575C7.96548 5.41781 8.01721 5.36986 8.01721 5.36986H8.06892C8.17237 5.32192 8.32755 5.36986 8.43099 5.46575C8.58616 5.56164 8.74133 5.70548 8.84478 5.84932C8.94823 5.99315 9.10341 6.13699 9.31031 6.32877C9.5172 6.52055 9.67237 6.66439 9.77582 6.71233L9.93098 6.80822C10.0344 6.85617 10.1379 6.90411 10.2931 6.95206C10.4482 7 10.5517 7 10.6551 7L12.4137 6.95206C12.5689 6.95206 12.7241 6.90412 12.8275 6.85617C12.931 6.80822 12.9827 6.76027 12.9827 6.66438C12.9827 6.61644 12.9827 6.52055 12.9827 6.47261C12.8792 6.37672 12.8792 6.32877 12.8792 6.28082Z" />
+			</g>
+		</symbol>
+		<symbol id="yandex-icon" viewBox="0 0 7 12">
+			<g>
+				<path d="M5.49866 6.52798H4.6797C3.39284 6.52798 2.14492 5.76009 2.14492 3.83991C2.14492 1.84006 3.31494 1.02401 4.50417 1.02401H5.49866V6.52798ZM6.78552 -4.76837e-07H4.56286C2.37861 -4.76837e-07 0.526742 1.36023 0.526742 4.00015C0.526742 5.58409 1.4236 6.75213 3.02257 7.32784L0.0391004 11.7439C-0.0585347 11.8879 0.0391003 12 0.19489 12H1.57939C1.69623 12 1.77466 11.968 1.8136 11.8879L4.52391 7.55199H5.49866V11.8879C5.49866 11.9361 5.55735 12 5.63524 12H6.84421C6.96105 12 7 11.9518 7 11.8722V0.159796C7 0.0481577 6.9221 -4.76837e-07 6.78552 -4.76837e-07Z"/>
+			</g>
+		</symbol>
+		<symbol id="rusprof-icon" viewBox="0 0 14 14">
+			<g>
+				<path d="M7.88803 3.61275C8.60733 3.7914 9.25241 4.1987 9.73017 4.77585C10.2079 5.353 10.4936 6.07015 10.5461 6.82381C10.5985 7.57746 10.415 8.32863 10.022 8.96891C9.62895 9.60919 9.04675 10.1055 8.35942 10.3861M8.35942 10.3861L7.86764 6.45585L8.40955 5.81375H7.85279L7.89176 3.61279V3.53135H8.30376V3.24534L6.96198 2.24903L5.62019 3.24534V3.53324H6.03219L6.0323 3.6696M8.35942 10.3861L8.68793 13C10.07 12.5865 11.2602 11.6794 12.0412 10.4443C12.8222 9.20927 13.1419 7.72872 12.9418 6.27304C12.7418 4.81736 12.0353 3.48369 10.9515 2.51561C9.86776 1.54752 8.47894 1.00962 7.03873 1.00013C5.59852 0.990639 4.20301 1.5102 3.10707 2.46393C2.01113 3.41765 1.28789 4.7419 1.06944 6.19482C0.85098 7.64774 1.15188 9.13239 1.91719 10.3776C2.68251 11.6228 3.86115 12.5456 5.23789 12.9773L5.57565 10.3028L6.05818 6.45017L5.51627 5.80807H6.07302L6.0323 3.6696M6.0323 3.6696C5.36039 3.88274 4.76716 4.29791 4.33025 4.86081C3.89334 5.4237 3.63309 6.10809 3.58356 6.82443C3.53403 7.54077 3.69752 8.25568 4.05264 8.87562C4.40777 9.49556 4.93798 9.99166 5.5739 10.299" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="close" viewBox="0 0 12 12">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M6 7.48679L1.48679 12L0 10.5132L4.51321 6L0 1.48679L1.48679 0L6 4.51321L10.5132 0L12 1.48679L7.48679 6L12 10.5132L10.5132 12L6 7.48679Z"/>
+			</g>
+		</symbol>
+		<symbol id="burger" viewBox="0 0 20 15">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M20 2.23047V0.230469H0V2.23047H20ZM20 6.23047V8.23047H0V6.23047H20ZM20 12.2305V14.2305H0V12.2305H20Z" />
+			</g>
+		</symbol>
+	</svg>
+
+	<div class="wrapper page page_service-consult page_gray-foot">
+		<!--Header-->
+		<header class="header" id="header">
+			<div class="header__menu">
+				<div class="container">
+					<div class="header__stat stat">
+						<div class="stat__item stat__data">25.04.2022</div>
+						<div class="stat__item">
+							<span class="stat__desc">$:</span>
+							<span class="stat__info">73.5050 ₽  0%</span>
+							<span class="stat__icon stat__icon_top">
+								<svg>
+									<use xlink:href="#arrow-small"></use>
+								</svg>
+							</span>
+						</div><!--/stat__item-->
+						<div class="stat__item">
+							<span class="stat__desc">€:</span>
+							<span class="stat__info">80.0249 ₽  0%</span>
+							<span class="stat__icon stat__icon_down">
+								<svg>
+									<use xlink:href="#arrow-small"></use>
+								</svg>
+							</span>
+						</div><!--/stat__item-->
+						<div class="stat__item">
+							<span class="stat__desc">LME: Zn: </span>
+							<span class="stat__info">4515 $/t 0.67%</span>
+							<span class="stat__icon stat__icon_top">
+								<svg>
+									<use xlink:href="#arrow-small"></use>
+								</svg>
+							</span>
+						</div><!--/stat__item-->
+						<div class="stat__item">
+							<span class="stat__desc">Pb:</span>
+							<span class="stat__info">2400 $/t -0.58%</span>
+							<span class="stat__icon stat__icon_down">
+								<svg>
+									<use xlink:href="#arrow-small"></use>
+								</svg>
+							</span>
+						</div><!--/stat__item-->
+						<div class="stat__item">
+							<span class="stat__desc">Sn:</span>
+							<span class="stat__info">42200 $/t -2.48%</span>
+							<span class="stat__icon stat__icon_down">
+								<svg>
+									<use xlink:href="#arrow-small"></use>
+								</svg>
+							</span>
+						</div><!--/stat__item-->
+						<div class="stat__item">
+							<span class="stat__desc">Cu:</span>
+							<span class="stat__info">10230.5 $/t -0.37%</span>
+							<span class="stat__icon stat__icon_down">
+								<svg>
+									<use xlink:href="#arrow-small"></use>
+								</svg>
+							</span>
+						</div><!--/stat__item-->
+						<div class="stat__item">
+							<span class="stat__desc">Al:</span>
+							<span class="stat__info">3244 $/t -0.55%</span>
+							<span class="stat__icon stat__icon_down">
+								<svg>
+									<use xlink:href="#arrow-small"></use>
+								</svg>
+							</span>
+						</div><!--/stat__item-->
+						<div class="stat__item">
+							<span class="stat__desc">Ag:</span>
+							<span class="stat__info">24.23 $/ozt. 0%</span>
+							<span class="stat__icon stat__icon_top">
+								<svg>
+									<use xlink:href="#arrow-small"></use>
+								</svg>
+							</span>
+						</div><!--/stat__item-->
+					</div><!--/stat-->
+					<div class="header__info">
+						<div class="header__info-block">
+							<h1 class="header__title">производство цветных металлов и сплавов</h1>
+							<a href="https://yandex.ru/maps/org/npo_feniks/1464768750/?ll=30.555597%2C59.790230&source=wizbiz_new_map_single&z=17" class="header__subtitle" target="blank">Санкт-Петербург, пос. металлострой</a>
+						</div>
+						<div class="header-social">
+							<a href="#" class="header-social__icon" target="blank">
+								<svg>
+									<use xlink:href="#vk-icon"></use>
+								</svg>
+							</a>
+							<a href="#" class="header-social__icon" target="blank">
+								<svg>
+									<use xlink:href="#yandex-icon"></use>
+								</svg>
+							</a>
+							<a href="#" class="header-social__icon header-social__icon_stroke" target="blank">
+								<svg>
+									<use xlink:href="#rusprof-icon"></use>
+								</svg>
+							</a>
+							<div class="header-lang">
+								<span>RU</span>
+								<div class="header-lang__dropdown">
+									<ul>
+										<li><a href="#">EN</a></li>
+										<li><a href="#">RU</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/header__menu-->
+			<div class="header__inner">
+				<div class="container">
+					<a href="/" class="header-logo">
+						<img src="assets/images/icons/logo.svg" alt="">
+						<div class="header-logo__title">
+							<span>Феникс</span>
+							<span>Научно-производственное объединение</span>
+						</div>
+					</a>
+					<div class="header-contact">
+						<div class="header-contact__items">
+							<a href="tel:88123390340" class="header-contact__item header-contact__item-phone">
+								<img src="assets/images/icons/phone-icon.svg" alt="">
+								<span>8 (812) 339-03-40</span>
+							</a>
+							<a href="mailto:info@npo-fenix.ru" class="header-contact__item header-contact__item">
+								<img src="assets/images/icons/mail-icon.svg" alt="">
+								<span>info@npo-fenix.ru</span>
+							</a>
+							<div class="header-contact__item header-contact__item">
+								<img src="assets/images/icons/clock-icon.svg" alt="">
+								<span>График работы: пн-пт 08:00 - 16:45 (офис)</span>
+							</div>
+						</div>
+						<div class="header-contact__phone">
+							<a href="tel:88123390340">
+								<div class="header-contact__phone-icon">
+									<img src="assets/images/icons/phone.svg" alt="">
+								</div>
+								<span>8 (812) 339-03-40</span>
+							</a>
+						</div>
+						<div class="header__burger burger">
+							<svg>
+								<use xlink:href="#burger"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__nav">
+				<div class="container">
+					<nav class="nav">
+						<ul>
+							<li>
+								<a href="#" class="nav__link">Производство <span>продукция</span></a>
+							</li>
+							<li>
+								<a href="#" class="nav__link">Купим</a>
+							</li>
+							<li>
+								<a href="#" class="nav__link">Лаборатория <span>платные услуги</span></a>
+							</li>
+							<li>
+								<a href="#" class="nav__link">Блог</a>
+							</li>
+							<li>
+								<a href="#" class="nav__link">Вакансии</a>
+							</li>
+							<li>
+								<a href="about.html" class="nav__link">О Нас</a>
+							</li>
+							<li>
+								<a href="#" class="nav__link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="header__mobile-menu mobile-menu">
+				<div class="mobile-menu__close">
+					<svg>
+						<use xlink:href="#close"></use>
+					</svg>
+				</div>
+				<div class="mobile-menu__inner">
+					<div class="mobile-menu__nav">
+						<ul>
+							<li>
+								<a href="#" class="mobile-menu__link">Производство <span>продукция</span></a>
+							</li>
+							<li>
+								<a href="#" class="mobile-menu__link">Купим</a>
+							</li>
+							<li>
+								<a href="#" class="mobile-menu__link">Лаборатория <span>платные услуги</span></a>
+							</li>
+							<li>
+								<a href="#" class="mobile-menu__link">Блог</a>
+							</li>
+							<li>
+								<a href="#" class="mobile-menu__link">Вакансии</a>
+							</li>
+							<li>
+								<a href="about.html" class="mobile-menu__link">О Нас</a>
+							</li>
+							<li>
+								<a href="#" class="mobile-menu__link">Контакты</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mobile-menu__contact">
+						<div class="header-contact__items">
+							<a href="tel:88123390340" class="header-contact__item header-contact__item-phone">
+								<img src="assets/images/icons/phone-icon.svg" alt="">
+								<span>8 (812) 339-03-40</span>
+							</a>
+							<a href="https://yandex.ru/maps/org/npo_feniks/1464768750/?ll=30.555597%2C59.790230&source=wizbiz_new_map_single&z=17" class="header-contact__item" target="blank">
+								<img src="assets/images/icons/pin.svg" alt="">
+								<span>Санкт-Петербург,<br> пос. металлострой</span>
+							</a>
+							<a href="mailto:info@npo-fenix.ru" class="header-contact__item header-contact__item">
+								<img src="assets/images/icons/mail-icon.svg" alt="">
+								<span>info@npo-fenix.ru</span>
+							</a>
+							<div class="header-contact__item header-contact__item">
+								<img src="assets/images/icons/clock-icon.svg" alt="">
+								<span>График работы:<br> пн-пт 08:00 - 16:45 (офис)</span>
+							</div>
+						</div>
+						<div class="header-social mobile-menu__social">
+							<a href="#" class="header-social__icon" target="blank">
+								<svg>
+									<use xlink:href="#vk-icon"></use>
+								</svg>
+							</a>
+							<a href="#" class="header-social__icon" target="blank">
+								<svg>
+									<use xlink:href="#yandex-icon"></use>
+								</svg>
+							</a>
+							<a href="#" class="header-social__icon header-social__icon_stroke" target="blank">
+								<svg>
+									<use xlink:href="#rusprof-icon"></use>
+								</svg>
+							</a>
+							<div class="header-lang">
+								<span>RU</span>
+								<div class="header-lang__dropdown">
+									<ul>
+										<li><a href="#">EN</a></li>
+										<li><a href="#">RU</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header><!--/header-->
+
+		<main class="main">
+			<div class="page__header">
+				<div class="container">
+					<div class="breadcrumbs">
+						<div class="breadcrumbs__buttons">
+							<a href="index.html" class="breadcrumbs__btn breadcrumbs__btn-home">
+								<svg>
+									<use xlink:href="#home"></use>
+								</svg>
+							</a>
+							<a href="#" class="breadcrumbs__btn breadcrumbs__btn-back">
+								<svg>
+									<use xlink:href="#arrow-unline"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="breadcrumbs__links">
+							<a href="index.html" class="breadcrumbs__item">
+								<span>Главная</span>
+							</a>
+							<a href="#" class="breadcrumbs__item breadcrumbs__item_back">
+								<span>Услуги</span>
+							</a>
+							<a href="#" class="breadcrumbs__item active">
+								<span>Консультационные услуги для предприятий и литейных производств</span>
+							</a>
+						</div>
+					</div><!--/breadcrumbs-->
+				</div>
+			</div><!--/page__header-->
+			<section class="services-box">
+				<div class="container">
+					<div class="services-box__inner">
+						<div class="services-box__info">
+							<div class="title-box">
+								<h2 class="title">Консультационные услуги для предприятий и литейных производств</h2>
+							</div>
+							<div class="description">
+								<p>ООО НПО «Феникс» имеет в наличии высококлассных специалистов, которые могут помочь Вам при открытии собственного производства горячего цинкования. Наши специалисты имеют огромный опыт работы и обучат ваших сотрудников.</p>
+								<p>Мы снабдим ваше производство необходимыми материалами.</p>
+							</div>
+						</div>
+						<div class="services-box__nav box-nav">
+							<h3 class="box-nav__title">Оказываем услуги</h3>
+							<div class="box-nav__item">
+								<a href="#">Лабораторное исследование металлов и сплавов</a>
+							</div>
+							<div class="box-nav__item">
+								<a href="#">Доставка продукции собственным автотранспортом</a>
+							</div>
+							<div class="box-nav__item active">
+								<a href="#">Консультационные услуги для предприятий и литейных производств</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!--/services-box-->
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__nav">
+					<nav class="nav">
+						<ul>
+							<li>
+								<a href="#" class="nav__link">Производство <span>продукция</span></a>
+							</li>
+							<li>
+								<a href="#" class="nav__link">Купим</a>
+							</li>
+							<li>
+								<a href="#" class="nav__link">Лаборатория <span>платные услуги</span></a>
+							</li>
+							<li>
+								<a href="#" class="nav__link">Блог</a>
+							</li>
+							<li>
+								<a href="#" class="nav__link">Вакансии</a>
+							</li>
+							<li>
+								<a href="#" class="nav__link">О Нас</a>
+							</li>
+							<li>
+								<a href="#" class="nav__link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<a href="#" class="arrow-top" data-scroll="header">
+						<svg>
+							<use xlink:href="#arrow"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="footer__inner">
+					<div class="footer__info">
+						<div class="footer__buttons">
+							<a href="/" class="footer-logo">
+								<img src="assets/images/icons/logo.svg" alt="">
+								<div class="footer-logo__title">
+									<span>Феникс</span>
+									<span>Научно-производственное объединение</span>
+								</div>
+							</a>
+							<div class="footer__burger burger">
+								<svg>
+									<use xlink:href="#burger"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="footer__text">
+							Вся продукция ООО «НПО «Феникс» проходит строжайший контроль сертифицированной лабораторией и соответствует требованиям ГОСТа и других стандартов качества.
+						</div>
+						<div class="footer__notification footer__notification_left">Любое использование материалов с сайта запрещено без письменного разрешения администрации сайта.</div>
+					</div>
+					<div class="footer-menu">
+						<div class="footer-menu__col">
+							<div>
+								<div class="footer__phone">
+									<a href="tel:88123390340">8 (812) 339-03-40</a>
+								</div>
+								<a href="mailto:info@npo-fenix.ru" class="footer-menu__item footer-menu__item-link">
+									<img src="assets/images/icons/mail-icon.svg" alt="">
+									<span>info@npo-fenix.ru</span>
+								</a>
+								<div class="footer-menu__item">
+									<img src="assets/images/icons/clock-icon.svg" alt="">
+									<span>График работы: пн-пт 08:00 - 16:45 (офис)</span>
+								</div>
+							</div>
+							<div class="footer-social">
+								<a href="#" class="footer-social__icon" target="blank">
+									<svg>
+										<use xlink:href="#vk-icon"></use>
+									</svg>
+								</a>
+								<a href="#" class="footer-social__icon" target="blank">
+									<svg>
+										<use xlink:href="#yandex-icon"></use>
+									</svg>
+								</a>
+								<a href="#" class="footer-social__icon footer-social__icon_stroke" target="blank">
+									<svg>
+										<use xlink:href="#rusprof-icon"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="footer-menu__col">
+							<div>
+								<div class="footer__link">
+									<a href="#">Политика конфиденциальности</a>
+								</div>
+								<div class="footer__link">
+									<a href="#">Реквизиты</a>
+								</div>
+								<div class="footer__notification footer__notification_right">Любое использование материалов с сайта запрещено без письменного разрешения администрации сайта.</div>
+							</div>
+							<div class="footer__copyright">Copyrights © 2022. Все права защищены</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer><!--footer-->
+	</div>
+	
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script src="assets/js/script.js"></script>
+
+</body>
+</html>
