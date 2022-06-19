@@ -34,6 +34,15 @@ $(document).ready(function() {
   });
   /*==========/vacancy-toggle=========*/
 
+      /*======List-box-toggle=============*/
+  $(".list-box_desc .list-box__title").on("click", function() {
+    if ($(window).width() <= 540){
+      $(this).toggleClass("active");
+      $(this).next().slideToggle();   
+    }
+  });
+  /*==========/list-box-toggle=========*/
+
   /*=========Smooth scroll=============*/
   $("[data-scroll]").on("click", function(event) {
   event.preventDefault();
@@ -382,7 +391,65 @@ $(document).ready(function() {
       },
       ]
   });
-  /*============/progress==========*/ 
+  /*============/progress==========*/
+
+  /*============Product-slider==========*/
+
+ $('.product-slider__slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+    var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+    
+    $('.product-slider__progress')
+      .css('background-size', calc + '% 100%')
+      .attr('aria-valuenow', calc );
+    
+    $( '.product-slider__label' ).text( calc + '% completed' );
+  });
+  
+  $('.product-slider__slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    speed: 400,
+    slidesPerRow: 1,
+    rows: 2,
+    prevArrow: $('.product-slider__arrow_prev'),
+    nextArrow: $('.product-slider__arrow_next'),
+    responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesPerRow: 1,
+        rows: 2,
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesPerRow: 1,
+        rows: 1,
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 570,
+      settings: {
+        slidesPerRow: 1,
+        rows: 1,
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 415,
+      settings: {
+        slidesPerRow: 1,
+        rows: 1,
+        slidesToShow: 1,
+      }
+    },
+    ]
+  });
+  /*============/product-slider==========*/  
 
 });
 

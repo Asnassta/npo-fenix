@@ -151,6 +151,18 @@ body {
 			opacity: 0.9;
 		}
 	}
+	&_blue {
+		span {
+			background-color: #7294C7;
+			font-size: 12px;
+			padding: 12px 24px;
+		}
+		.btn__icon {
+			background-color: #7294C7;
+			opacity: 0.9;
+			padding: 15px 10px;
+		}
+	}
 	&:hover {
 		span {
 			opacity: 0.9;
