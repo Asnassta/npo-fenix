@@ -1013,10 +1013,11 @@
 				margin-left: 12px;
 				span {
 					&:first-child {
-						font-size: 26.9px;
+						font-size: 35.9px;
 					}
 					&:nth-child(2) {
-						font-size: 5.74px;
+						font-size: 8.74px;
+						letter-spacing: -0.5px;
 					}
 				}
 			}
@@ -1081,6 +1082,19 @@
 	.header {
 		&__title {
 			font-size: 11px;
+		}
+		&-logo {
+			&__title {
+				margin-left: 5px;
+				span {
+					&:first-child {
+						font-size: 31.9px;
+					}
+					&:nth-child(2) {
+						font-size: 7.74px;
+					}
+				}
+			}
 		}
 	}
 }

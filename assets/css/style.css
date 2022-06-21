@@ -986,9 +986,10 @@
     .header-logo__title {
       margin-left: 12px; }
       .header-logo__title span:first-child {
-        font-size: 26.9px; }
+        font-size: 35.9px; }
       .header-logo__title span:nth-child(2) {
-        font-size: 5.74px; }
+        font-size: 8.74px;
+        letter-spacing: -0.5px; }
   .mobile-menu .header-contact__items {
     display: block; }
   .mobile-menu__social {
@@ -1030,7 +1031,13 @@
 
 @media (max-width: 360px) {
   .header__title {
-    font-size: 11px; } }
+    font-size: 11px; }
+  .header-logo__title {
+    margin-left: 5px; }
+    .header-logo__title span:first-child {
+      font-size: 31.9px; }
+    .header-logo__title span:nth-child(2) {
+      font-size: 7.74px; } }
 
 /*========/adaptive==========*/
 @media (max-width: 992px) {
@@ -2454,6 +2461,11 @@
     margin-bottom: 40px; }
     .product-card__list:last-child {
       margin-bottom: 0; }
+  .product-card__table {
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in; }
+    .product-card__table img {
+      width: 100%; }
 
 /*======/product-card=======*/
 /*======Contact-box====*/
@@ -2828,6 +2840,14 @@
     width: 44.63px;
     height: 49.09px; }
 
+.ymaps-2-1-79-balloon__content > * {
+  max-width: 220px;
+  min-height: 50px; }
+
+#map {
+  width: 100%;
+  height: 850px; }
+
 /*==========/address======*/
 /*========Adaptive======*/
 @media (max-width: 1800px) {
@@ -2858,6 +2878,10 @@
         opacity: 1; }
       .photo-slider__arrow:hover svg, .product-slider__arrow:hover svg {
         opacity: 0.3; } }
+
+@media (max-width: 1275px) {
+  .address-card {
+    left: 48px; } }
 
 @media (max-width: 1200px) {
   .page_gray-foot .footer__info {
@@ -3104,6 +3128,10 @@
       padding: 30px 20px; }
       .production .product-box:hover {
         height: 220px; }
+        .production .product-box:hover:after {
+          opacity: 0; }
+        .production .product-box:hover:before {
+          opacity: 1; }
       .production .product-box__subtitle {
         display: none; }
   .product-slider {
@@ -3137,6 +3165,8 @@
     height: 500px;
     -o-object-position: bottom 0 right 25%;
     object-position: bottom 0 right 25%; }
+  .address #map {
+    height: 500px; }
   .contact-page {
     padding-bottom: 38px; }
     .contact-page__inner {
