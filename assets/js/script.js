@@ -1,4 +1,18 @@
+function tabs(n) {
+    $('.tabs-nav a').removeClass('active');
+    $('.tabs-nav a.t' + n).addClass('active');
+    $('.tabs-block').fadeOut(0);
+    $('.tabs-block.tab_' + n).fadeIn(222);
+};
+
 $(document).ready(function() {
+    /*======Production-filter=============*/
+  $(".production-filter__btn").on("click", function(event) {
+    event.preventDefault();
+    $(this).toggleClass("active");
+    $(".production-filter__inner").slideToggle();
+  });
+  /*==========/production-filter=========*/
 
 	/*======Lang-toggle=============*/
   $(".header-lang").on("click", function() {
