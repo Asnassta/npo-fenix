@@ -2,6 +2,16 @@
 	margin-bottom: 50px;
 }
 
+.header-logo__title {
+	white-space: nowrap;
+	font-size: 29px;
+	span {
+		&:first-child {
+			font-size: 29px!important;
+		}
+	}
+}
+
 .header-social__icon {
 	&_big {
 		width: auto;
@@ -371,6 +381,7 @@
 	}
 	&-filter {
 		margin: 50px 0;
+		padding-right: 10%;
 		&__inner {
 			display: flex;
 			flex-wrap: wrap;
@@ -383,7 +394,8 @@
 			&:last-child {
 				margin-right: 0;
 			}
-			label {
+			a {
+				display: inline-block;
 				background-color: $gray;
 				padding: 12px 24px;
 				font-family: $ff;
@@ -396,10 +408,11 @@
 				align-items: center;
 				justify-content: center;
 				cursor: pointer;
-			}
-			input {
-				display: none;
-				&:checked + label {
+				&:hover {
+					color: $wh;
+					background-color: $lbrown;
+				}
+				&.active {
 					color: $wh;
 					background-color: $lbrown;
 				}
@@ -618,6 +631,14 @@
 
 
 @media(max-width: 546px) {
+	.header-logo__title {
+		font-size: 16.5px;
+		span {
+			&:first-child {
+				font-size: 16.5px!important;
+			}
+		}
+}
 	.labor {
 		padding: 40px 0 50px;
 		&__info {
@@ -638,7 +659,7 @@
 			&__item {
 				margin-right: 12px;
 				margin-bottom: 8px;
-				label {
+				a {
 					font-size: 12px;
 					padding: 8px 16px;
 				}
@@ -672,6 +693,14 @@
 	.manufacture {
 		.title {
 			font-size: 24px;
+		}
+	}
+}
+
+@media(max-width: 360px) {
+	.manufacture {
+		&-filter {
+			padding-right: 0%;
 		}
 	}
 }

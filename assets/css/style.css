@@ -3874,6 +3874,12 @@
 .mb-50 {
   margin-bottom: 50px; }
 
+.header-logo__title {
+  white-space: nowrap;
+  font-size: 29px; }
+  .header-logo__title span:first-child {
+    font-size: 29px !important; }
+
 .header-social__icon_big {
   width: auto;
   padding: 3px 9px;
@@ -4212,7 +4218,8 @@
     -ms-flex-pack: justify;
     justify-content: space-between; }
   .manufacture-filter {
-    margin: 50px 0; }
+    margin: 50px 0;
+    padding-right: 10%; }
     .manufacture-filter__inner {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -4226,7 +4233,8 @@
       margin-bottom: 20px; }
       .manufacture-filter__item:last-child {
         margin-right: 0; }
-      .manufacture-filter__item label {
+      .manufacture-filter__item a {
+        display: inline-block;
         background-color: #F9F9F9;
         padding: 12px 24px;
         font-family: "Roboto", sans-serif;
@@ -4247,9 +4255,10 @@
         -ms-flex-pack: center;
         justify-content: center;
         cursor: pointer; }
-      .manufacture-filter__item input {
-        display: none; }
-        .manufacture-filter__item input:checked + label {
+        .manufacture-filter__item a:hover {
+          color: #fff;
+          background-color: #BF9D77; }
+        .manufacture-filter__item a.active {
           color: #fff;
           background-color: #BF9D77; }
     .manufacture-filter .btn {
@@ -4412,6 +4421,10 @@
     margin-bottom: 30px; } }
 
 @media (max-width: 546px) {
+  .header-logo__title {
+    font-size: 16.5px; }
+    .header-logo__title span:first-child {
+      font-size: 16.5px !important; }
   .labor {
     padding: 40px 0 50px; }
     .labor__info {
@@ -4428,7 +4441,7 @@
       .manufacture-filter__item {
         margin-right: 12px;
         margin-bottom: 8px; }
-        .manufacture-filter__item label {
+        .manufacture-filter__item a {
           font-size: 12px;
           padding: 8px 16px; }
     .manufacture__inner > * {
@@ -4446,6 +4459,10 @@
 @media (max-width: 375px) {
   .manufacture .title {
     font-size: 24px; } }
+
+@media (max-width: 360px) {
+  .manufacture-filter {
+    padding-right: 0%; } }
 
 /*===========/adaptive============*/
 /*Reset
