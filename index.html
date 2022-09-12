@@ -10,6 +10,11 @@
 <body>
 	<!--Sprite-->
 	<svg style="display: none;">
+		<symbol id="camera-icon" viewBox="0 0 14 14">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M4.04651 3.4098C4.08784 3.35235 4.13374 3.28201 4.19227 3.18717C4.21365 3.15253 4.27193 3.05639 4.31534 2.98476L4.31542 2.98463L4.3643 2.90407C4.84788 2.11306 5.1994 1.75 5.83325 1.75H8.16659C8.80044 1.75 9.15196 2.11306 9.63553 2.90407L9.68444 2.98466L9.68458 2.9849C9.72798 3.05651 9.7862 3.15255 9.80756 3.18717C9.8661 3.28201 9.912 3.35235 9.95333 3.4098C9.98058 3.44769 10.0044 3.4778 10.0238 3.5H11.6666C12.6331 3.5 13.4166 4.2835 13.4166 5.25V10.5C13.4166 11.4665 12.6331 12.25 11.6666 12.25H2.33325C1.36675 12.25 0.583252 11.4665 0.583252 10.5V5.25C0.583252 4.2835 1.36675 3.5 2.33325 3.5H3.97603C3.99545 3.4778 4.01926 3.44769 4.04651 3.4098ZM2.33325 4.66667C2.01109 4.66667 1.74992 4.92783 1.74992 5.25V10.5C1.74992 10.8222 2.01109 11.0833 2.33325 11.0833H11.6666C11.9888 11.0833 12.2499 10.8222 12.2499 10.5V5.25C12.2499 4.92783 11.9888 4.66667 11.6666 4.66667H9.91658C9.52905 4.66667 9.2677 4.45457 9.00623 4.09107C8.94607 4.00743 8.88647 3.9161 8.81474 3.79989C8.79023 3.76017 8.72667 3.6553 8.6829 3.58308L8.68252 3.58245L8.64014 3.51259C8.37629 3.081 8.21718 2.91667 8.16658 2.91667H5.83325C5.78266 2.91667 5.62354 3.081 5.3597 3.51259L5.31727 3.58253C5.27348 3.65477 5.20967 3.76007 5.18509 3.79989C5.11337 3.9161 5.05377 4.00743 4.99361 4.09107C4.73213 4.45457 4.47078 4.66667 4.08325 4.66667H2.33325ZM11.6666 5.83333C11.6666 6.1555 11.4054 6.41667 11.0833 6.41667C10.7611 6.41667 10.4999 6.1555 10.4999 5.83333C10.4999 5.51117 10.7611 5.25 11.0833 5.25C11.4054 5.25 11.6666 5.51117 11.6666 5.83333ZM4.08325 7.58333C4.08325 9.19416 5.38909 10.5 6.99992 10.5C8.61075 10.5 9.91659 9.19416 9.91659 7.58333C9.91659 5.9725 8.61075 4.66667 6.99992 4.66667C5.38909 4.66667 4.08325 5.9725 4.08325 7.58333ZM8.74992 7.58333C8.74992 8.54983 7.96642 9.33333 6.99992 9.33333C6.03342 9.33333 5.24992 8.54983 5.24992 7.58333C5.24992 6.61684 6.03342 5.83333 6.99992 5.83333C7.96642 5.83333 8.74992 6.61684 8.74992 7.58333Z"/>
+			</g>
+		</symbol>
 		<symbol id="case-icon" viewBox="0 0 20 18">
 			<g>
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H12C13.1046 0 14 0.89543 14 2V3H18C19.1046 3 20 3.89543 20 5V16C20 17.1046 19.1046 18 18 18H2C0.89543 18 0 17.1046 0 16V5C0 3.89543 0.89543 3 2 3H6V2C6 0.89543 6.89543 0 8 0ZM2 5H6H14H18V10H11H9H2V5ZM2 16V12H9V13H11V12H18V16H2ZM12 2V3H8V2H12Z"/>
@@ -168,14 +173,15 @@
 							<a href="https://yandex.ru/maps/org/npo_feniks/1464768750/?ll=30.555597%2C59.790230&source=wizbiz_new_map_single&z=17" class="header__subtitle" target="blank">Санкт-Петербург, пос. металлострой</a>
 						</div>
 						<div class="header-social">
-							<a href="#" class="header-social__icon" target="blank">
+							<a href="#" class="header-social__icon header-social__icon_big" target="blank">
 								<svg>
-									<use xlink:href="#vk-icon"></use>
+									<use xlink:href="#camera-icon"></use>
 								</svg>
+								<span>Фото продукции</span>
 							</a>
 							<a href="#" class="header-social__icon" target="blank">
 								<svg>
-									<use xlink:href="#yandex-icon"></use>
+									<use xlink:href="#vk-icon"></use>
 								</svg>
 							</a>
 							<a href="#" class="header-social__icon header-social__icon_stroke" target="blank">
@@ -221,6 +227,11 @@
 							</div>
 						</div>
 						<div class="header-contact__phone">
+							<div class="header-contact__links">
+								<a href="#">Вакансии</a>
+								<a href="#">О нас</a>
+								<a href="#">Контакты</a>
+							</div>
 							<a href="tel:88123390340">
 								<div class="header-contact__phone-icon">
 									<img src="assets/images/icons/phone.svg" alt="">
@@ -317,14 +328,14 @@
 							</div>
 						</div>
 						<div class="header-social mobile-menu__social">
-							<a href="#" class="header-social__icon" target="blank">
+							<a href="#" class="header-social__icon header-social__icon_big" target="blank">
 								<svg>
-									<use xlink:href="#vk-icon"></use>
+									<use xlink:href="#camera-icon"></use>
 								</svg>
 							</a>
 							<a href="#" class="header-social__icon" target="blank">
 								<svg>
-									<use xlink:href="#yandex-icon"></use>
+									<use xlink:href="#vk-icon"></use>
 								</svg>
 							</a>
 							<a href="#" class="header-social__icon header-social__icon_stroke" target="blank">
@@ -517,94 +528,144 @@
 					</div>
 				</div>
 			</section><!--/product-->
-			<section class="service bg-gray bg-line bg-line_right">
+			<section class="work bg-gray bg-line bg-line_right">
 				<div class="container">
 					<div class="title-box">
-						<h2 class="title">Наши услуги</h2>
-						<div class="subtitle">Что мы делаем для Вас</div>
+						<h2 class="title">как мы работаем</h2>
 					</div>
-					<div class="service__row">
-						<div class="description">Наше предприятие предоставляет своим партнёрам все необходимые услуги.</div>
-						<div class="slider-arrows">
-							<div class="slider-arrows__arrow slider-arrows__arrow_prev">
-								<svg>
-									<use xlink:href="#arrow"></use>
-								</svg>
+					<div class="work__inner">
+						<div class="work__item">
+							<div class="work__icon">
+								<img src="assets/images/icons/work_1.svg" alt="">
 							</div>
-							<div class="slider-arrows__arrow slider-arrows__arrow_next">
-								<svg>
-									<use xlink:href="#arrow"></use>
-								</svg>
+							<div class="work__info">Обращение любым удобным способом</div>
+						</div><!--/work__item-->
+						<div class="work__item">
+							<div class="work__icon">
+								<img src="assets/images/icons/work_2.svg" alt="">
 							</div>
-						</div><!--/slider-arrows-->
+							<div class="work__info">Формирование предложения и согласования объема</div>
+						</div><!--/work__item-->
+						<div class="work__item">
+							<div class="work__icon">
+								<img src="assets/images/icons/work_3.svg" alt="">
+							</div>
+							<div class="work__info">Заключение договора</div>
+						</div><!--/work__item-->
+						<div class="work__item">
+							<div class="work__icon">
+								<img src="assets/images/icons/work_4.svg" alt="">
+							</div>
+							<div class="work__info">Отливка заказа</div>
+						</div><!--/work__item-->
+						<div class="work__item">
+							<div class="work__icon">
+								<img src="assets/images/icons/work_5.svg" alt="">
+							</div>
+							<div class="work__info">Проверка качества продукции</div>
+						</div><!--/work__item-->
+						<div class="work__item">
+							<div class="work__icon">
+								<img src="assets/images/icons/work_6.svg" alt="">
+							</div>
+							<div class="work__info">Доставка</div>
+						</div><!--/work__item-->
+						<div class="work__item">
+							<div class="work__icon">
+								<img src="assets/images/icons/work_7.svg" alt="">
+							</div>
+							<div class="work__info">Надлежащее исполнение договорённостей</div>
+						</div><!--/work__item-->
 					</div>
-					<div class="service__slider">
-						<div class="service__slide">
-							<div class="info-box">
-								<a href="#" class="info-box__photo">
-									<img src="assets/images/delivery.png" alt="">
-								</a>
-								<div class="info-box__info">
-									<div>
-										<a href="#" class="info-box__title">
-											<span>Доставка продукции собственным автотранспортом</span>
-										</a>
-										<div class="info-box__description">ООО НПО «Феникс» предоставляет услуги по доставке продукции до покупателя. Мы беспечиваем оперативную доставку нашей</div>
-									</div>
-									<a href="#" class="info-box__link">
-										<span>Подробнее</span>
-										<svg>
-											<use xlink:href="#arrow"></use>
-										</svg>
-									</a>
-								</div>
-							</div><!--/info-box-->
-						</div>
-						<div class="service__slide">
-							<div class="info-box">
-								<a href="#" class="info-box__photo info-box__photo_logo">
-									<img src="assets/images/consult.png" alt="">
-								</a>
-								<div class="info-box__info">
-									<div>
-										<a href="#" class="info-box__title">
-											<span>Консультационные услуги для предприятий и литейных производств</span>
-										</a>
-										<div class="info-box__description">Консультационные услуги для предприятий горячего цинкования и литейных производств</div>
-									</div>
-									<a href="#" class="info-box__link">
-										<span>Подробнее</span>
-										<svg>
-											<use xlink:href="#arrow"></use>
-										</svg>
-									</a>
-								</div>
+				</div>
+			</section><!--/work-->
+			<section class="labor">
+				<div class="container">
+					<div class="labor__inner">
+						<div class="labor__info">
+							<div class="title-box">
+								<h2 class="title">Лабораторное исследование </h2>
+								<div class="subtitle">металлов и сплавов</div>
 							</div>
-						</div>
-						<div class="service__slide">
-							<div class="info-box">
-								<a href="#" class="info-box__photo">
-									<img src="assets/images/labor.png" alt="">
-								</a>
-								<div class="info-box__info">
-									<div>
-										<a href="#" class="info-box__title">
-											<span>Лабораторное исследование металлов и сплавов</span>
-										</a>
-										<div class="info-box__description">Наша компания предлагает услуги по определению химического состава черных и цветных металлов и сплавов.</div>
-									</div>
-									<a href="#" class="info-box__link">
-										<span>Подробнее</span>
-										<svg>
-											<use xlink:href="#arrow"></use>
-										</svg>
-									</a>
+							<div class="description">
+								<p>Для приема металлолома создаются приемные пункты. После сдачи металлолома на специализированные предприятия, он сортируется, измельчается, прессуется в брикеты и идет в переплавку. Сдача металлолома позволяет многим организациям, не только навести порядок на своей территории, но и получить весомый доход. Не смотря на то, что в России имеется огромное количество источников сырья для производства черных металлов, вопрос о вторичном использовании металла остается актуальным. </p>
+								<p>У организаций, занимающихся приемом и сбором металлического лома, существуют, как плюсы, так и минусы. Являясь, по сути своей, посредниками такие организации способствуют росту цен на лом. В связи с этим цена лома устанавливается в зависимости от множества обстоятельств, включающие в себя и котировки цен на металлы на Лондонской бирже металлов.</p>
+							</div>
+							<a href="#" class="btn">
+								<span>Подробнее</span>
+								<div class="btn__icon">
+									<img src="assets/images/icons/arrow.svg" alt="">
 								</div>
+							</a>
+						</div>
+						<div class="labor__photo">
+							<div class="slider-arrows slider-arrows_big">
+								<div class="slider-arrows__arrow slider-arrows__arrow_prev">
+									<svg>
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</div>
+								<div class="slider-arrows__arrow slider-arrows__arrow_next">
+									<svg>
+										<use xlink:href="#arrow-long"></use>
+									</svg>
+									<svg>
+										<use xlink:href="#arrow"></use>
+									</svg>
+								</div>
+							</div><!--/slider-arrows-->
+							<div class="labor__slider">
+								<div class="labor__slide">
+									<div class="labor__item">
+										<img src="assets/images/production.png" alt="">
+									</div>
+								</div><!--/about__slide-->
+								<div class="labor__slide">
+									<div class="labor__item">
+										<img src="assets/images/production.png" alt="">
+									</div>
+								</div><!--/about__slide-->
+								<div class="labor__slide">
+									<div class="labor__item">
+										<img src="assets/images/production.png" alt="">
+									</div>
+								</div><!--/about__slide-->
 							</div>
 						</div>
 					</div>
 				</div>
-			</section><!--/service-->
+			</section><!--/labor-->
+			<section class="delivery bg-gray bg-line bg-line_left">
+				<div class="delivery__map">
+					<img src="assets/images/map.png" alt="">
+				</div>
+				<div class="container">
+					<div class="title-box">
+						<h2 class="title">Доставка</h2>
+						<div class="subtitle">по всей территории РФ</div>
+					</div>
+					<div class="delivery__inner">
+						<div class="delivery__item">
+							<div class="delivery__icon">
+								<img src="assets/images/icons/delivery-icon_1.svg" alt="">
+							</div>
+							<div class="delivery__description">Своим автотранспортом</div>
+						</div>
+						<div class="delivery__item">
+							<div class="delivery__icon">
+								<img src="assets/images/icons/delivery-icon_2.svg" alt="">
+							</div>
+							<div class="delivery__description">По железной дороге</div>
+						</div>
+						<div class="delivery__item">
+							<div class="delivery__icon">
+								<img src="assets/images/icons/delivery-icon_3.svg" alt="">
+							</div>
+							<div class="delivery__description">Транспортными компаниями</div>
+						</div>
+					</div>
+				</div>
+			</section><!--/delivery-->
 			<section class="partner">
 				<div class="container">
 					<div class="partner__inner">
