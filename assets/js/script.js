@@ -71,6 +71,22 @@ $(document).ready(function() {
   });
 /*=========/smooth scroll=============*/
 
+/*======View-btn=============*/
+    $(".view-btn a.table").on("click", function(event) {
+        event.preventDefault();
+      $(this).addClass('active');
+      $(".view-btn a").not(this).removeClass('active');
+      $(".manufacture__inner").removeClass('line');
+    });
+
+    $(".view-btn a.line").on("click", function(event) {
+        event.preventDefault();
+      $(this).addClass('active');
+      $(".view-btn a").not(this).removeClass('active');
+      $(".manufacture__inner").addClass('line');
+    });
+  /*==========/view-btn=========*/
+
   /*======Sliders=============*/
 
   /*==Intro__slider==*/
@@ -338,6 +354,16 @@ $(document).ready(function() {
       },
       ]
   });/*==/supply__slider==*/
+
+     /*==Labor__slider==*/
+  $('.labor__slider').slick({
+      infinite: true,
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.labor__inner .slider-arrows__arrow_prev'),
+      nextArrow: $('.labor__inner .slider-arrows__arrow_next'),
+  });/*==/labor__slider==*/
 
        /*==header__stat==*/
   $('.header__stat').slick({
