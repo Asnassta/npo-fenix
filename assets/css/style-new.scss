@@ -2,15 +2,6 @@
 	margin-bottom: 50px;
 }
 
-.header-logo__title {
-	font-size: 29px;
-	span {
-		&:first-child {
-			font-size: 29px;
-		}
-	}
-}
-
 .header-social__icon {
 	&_big {
 		width: auto;
@@ -627,14 +618,6 @@
 
 
 @media(max-width: 546px) {
-	.header-logo__title {
-	font-size: 29px;
-	span {
-		&:first-child {
-			font-size: 17px;
-		}
-	}
-}
 	.labor {
 		padding: 40px 0 50px;
 		&__info {

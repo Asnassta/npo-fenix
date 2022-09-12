@@ -3874,11 +3874,6 @@
 .mb-50 {
   margin-bottom: 50px; }
 
-.header-logo__title {
-  font-size: 29px; }
-  .header-logo__title span:first-child {
-    font-size: 29px; }
-
 .header-social__icon_big {
   width: auto;
   padding: 3px 9px;
@@ -4417,10 +4412,6 @@
     margin-bottom: 30px; } }
 
 @media (max-width: 546px) {
-  .header-logo__title {
-    font-size: 29px; }
-    .header-logo__title span:first-child {
-      font-size: 17px; }
   .labor {
     padding: 40px 0 50px; }
     .labor__info {
