@@ -77,6 +77,167 @@
 	}
 }
 
+
+.nav {
+	&__link {
+		&.active {
+			color: $lbrown;
+			span {
+				color: rgba(191, 157, 119, 0.5);
+			}
+		}
+	}
+	&-drop {
+		position: relative;
+	}
+	&-dropdown {
+		display: none;
+		position: absolute;
+		padding: 30px;
+		width: 380px;
+		top: calc(100% - 4px);
+		left: 0;
+		z-index: 1;
+		background-color: $wh;
+		border-top: 4px solid #BF9D77;
+		box-shadow: 0px 20px 50px rgba(55, 32, 14, 0.1);
+		&__inner {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -20px;
+			position: relative;
+			&:after {
+				content: "";
+				width: 100%;
+				height: 3px;
+				background-color: $wh;
+				position: absolute;
+				bottom: 16px;
+				left: 20px;
+				z-index: 5;
+			}
+			>* {
+				margin-left: 20px;
+				width: calc(50% - 20px);
+				margin-bottom: 16px;
+			}
+		}
+		&__item {
+			display: block;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $bl;
+			line-height: 1.5;
+			padding-bottom: 16px;
+			border-bottom: 1px solid $lbrown;
+			transition: all .2s linear;
+			&:hover {
+				color: $red;
+				border-color: $red;
+			}
+		}
+		.btn {
+			margin-top: 24px;
+			flex: 1 1 auto;
+			min-width: 240px;
+		}
+	}
+}
+
+.mobile-menu {
+	&__back {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		a {
+			color: $lbrown;
+			margin-left: 20px;
+		}
+	}
+	&__submenu {
+		background-color: $wh;
+		position: relative;
+		z-index: 10;
+		margin-top: -60px;
+		display: none;
+		a {
+			font-size: 16px;
+			font-weight: 400;
+			color: $bl;
+			line-height: 1.5;
+			transition: all .2s linear;
+			span {
+				font-size: 12px;
+				display: block;
+			}
+			&:hover {
+				color: $red;
+			}
+		}
+		li {
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+	}
+	&__link {
+		&-drop {
+			display: block;
+			position: relative;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			&:before {
+				content: "";
+				width: 16px;
+				height: 16px;
+				background: url("../images/icons/arrow-left.svg");
+				transform: rotate(180deg);
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: 1;
+			}
+			&:after {
+				content: "";
+				width: 100%;
+				height: 1px;
+				background-color: #ECE2D6;
+				position: absolute;
+				left: 0;
+				bottom: -20px;
+				z-index: 1;
+			}
+		}
+	}
+	&__nav {
+		padding: 0!important;
+	}
+	&-top {
+		background-color: $wh;
+		padding: 20px 40px 20px;
+	}
+	&-bottom {
+		background-color: $gray;
+		padding: 20px 40px 20px;
+	}
+	&__contact {
+		background-color: $wh;
+	}
+	.header-lang {
+		background: rgba(191, 157, 119, 0.2);
+		span {
+			color: $lbrown;
+		}
+		&:after {
+			background: url("../images/icons/chevron-bottom_brown.svg") center no-repeat;
+		}
+		&__dropdown {
+			background: rgba(191, 157, 119, 0.2);
+			a {
+				color: $lbrown;
+			}
+		}
+	}
+}
+
 .work {
 	.title-box {
 		margin-bottom: 50px;
