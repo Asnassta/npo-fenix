@@ -250,8 +250,28 @@
 				<div class="container">
 					<nav class="nav">
 						<ul>
-							<li>
+							<li class="nav-drop">
 								<a href="#" class="nav__link">Производство <span>продукция</span></a>
+								<div class="nav-dropdown">
+									<div class="nav-dropdown__inner">
+										<a href="#" class="nav-dropdown__item">Медь</a>
+										<a href="#" class="nav-dropdown__item">Цинк</a>
+										<a href="#" class="nav-dropdown__item">Свинец</a>
+										<a href="#" class="nav-dropdown__item">Олово</a>
+										<a href="#" class="nav-dropdown__item">Бронза</a>
+										<a href="#" class="nav-dropdown__item">Баббиты</a>
+										<a href="#" class="nav-dropdown__item">Латунь</a>
+										<a href="#" class="nav-dropdown__item">Индий</a>
+										<a href="#" class="nav-dropdown__item">Припои</a>
+										<a href="#" class="nav-dropdown__item">Сурьма</a>
+									</div>
+									<a href="#" class="btn">
+										<span>Вся продукция</span>
+										<div class="btn__icon">
+											<img src="assets/images/icons/burger.svg" alt="">
+										</div>
+									</a>
+								</div>
 							</li>
 							<li>
 								<a href="#" class="nav__link">Купим</a>
@@ -277,33 +297,73 @@
 				</div>
 				<div class="mobile-menu__inner">
 					<div class="mobile-menu__nav">
-						<ul>
+						<div class="mobile-menu-top">
+							<ul>
+								<li>
+									<a href="#" class="mobile-menu__link mobile-menu__link-drop">Производство <span>продукция</span></a>
+									<ul class="mobile-menu__submenu">
+										<li class="mobile-menu__back">
+											<img src="assets/images/icons/arrow-left.svg" alt="">
+											<a href="#">Назад</a>
+										</li>
+										<li>
+											<a href="#">Вся продукция</a>
+										</li>
+										<li>
+											<a href="#">Медь</a>
+										</li>
+										<li>
+											<a href="#">Свинец</a>
+										</li>
+										<li>
+											<a href="#">Бронза</a>
+										</li>
+										<li>
+											<a href="#">Латунь</a>
+										</li><li>
+											<a href="#">Припои</a>
+										</li>
+										<li>
+											<a href="#">Цинк</a>
+										</li>
+										<li>
+											<a href="#">Олово</a>
+										</li>
+										<li>
+											<a href="#">Баббиты</a>
+										</li>
+										<li>
+											<a href="#">Индий</a>
+										</li><li>
+											<a href="#">Сурьма</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="mobile-menu__hide">
+								<li>
+									<a href="#" class="mobile-menu__link">Купим</a>
+								</li>
+								<li>
+									<a href="#" class="mobile-menu__link">Лаборатория <span>платные услуги</span></a>
+								</li>
+								<li>
+									<a href="#" class="mobile-menu__link">Доставка</a>
+								</li>
+								<li>
+									<a href="#" class="mobile-menu__link">Фото</a>
+								</li>
+							</ul>
+						</div>
+						<ul class="mobile-menu-bottom">
 							<li>
-								<a href="#" class="mobile-menu__link">Производство <span>продукция</span></a>
-							</li>
-							<li>
-								<a href="#" class="mobile-menu__link">Купим</a>
-							</li>
-							<li>
-								<a href="#" class="mobile-menu__link">Лаборатория <span>платные услуги</span></a>
-							</li>
-							<li>
-								<a href="#" class="mobile-menu__link">Блог</a>
+								<a href="about.html" class="mobile-menu__link">О Нас</a>
 							</li>
 							<li>
 								<a href="#" class="mobile-menu__link">Вакансии</a>
 							</li>
 							<li>
-								<a href="about.html" class="mobile-menu__link">О Нас</a>
-							</li>
-							<li>
 								<a href="#" class="mobile-menu__link">Контакты</a>
-							</li>
-							<li>
-								<a href="#" class="mobile-menu__link">Доставка</a>
-							</li>
-							<li>
-								<a href="#" class="mobile-menu__link">Фото</a>
 							</li>
 						</ul>
 					</div>
@@ -313,13 +373,13 @@
 								<img src="assets/images/icons/phone-icon.svg" alt="">
 								<span>8 (812) 339-03-40</span>
 							</a>
-							<a href="https://yandex.ru/maps/org/npo_feniks/1464768750/?ll=30.555597%2C59.790230&source=wizbiz_new_map_single&z=17" class="header-contact__item" target="blank">
-								<img src="assets/images/icons/pin.svg" alt="">
-								<span>Санкт-Петербург,<br> пос. металлострой</span>
-							</a>
 							<a href="mailto:info@npo-fenix.ru" class="header-contact__item header-contact__item">
 								<img src="assets/images/icons/mail-icon.svg" alt="">
 								<span>info@npo-fenix.ru</span>
+							</a>
+							<a href="https://yandex.ru/maps/org/npo_feniks/1464768750/?ll=30.555597%2C59.790230&source=wizbiz_new_map_single&z=17" class="header-contact__item" target="blank">
+								<img src="assets/images/icons/pin.svg" alt="">
+								<span>Санкт-Петербург,<br> пос. металлострой</span>
 							</a>
 							<div class="header-contact__item header-contact__item">
 								<img src="assets/images/icons/clock-icon.svg" alt="">
