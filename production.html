@@ -256,8 +256,28 @@
 				<div class="container">
 					<nav class="nav">
 						<ul>
-							<li>
+							<li class="nav-drop">
 								<a href="#" class="nav__link">Производство <span>продукция</span></a>
+								<div class="nav-dropdown">
+									<div class="nav-dropdown__inner">
+										<a href="#" class="nav-dropdown__item">Медь</a>
+										<a href="#" class="nav-dropdown__item">Цинк</a>
+										<a href="#" class="nav-dropdown__item">Свинец</a>
+										<a href="#" class="nav-dropdown__item">Олово</a>
+										<a href="#" class="nav-dropdown__item">Бронза</a>
+										<a href="#" class="nav-dropdown__item">Баббиты</a>
+										<a href="#" class="nav-dropdown__item">Латунь</a>
+										<a href="#" class="nav-dropdown__item">Индий</a>
+										<a href="#" class="nav-dropdown__item">Припои</a>
+										<a href="#" class="nav-dropdown__item">Сурьма</a>
+									</div>
+									<a href="#" class="btn">
+										<span>Вся продукция</span>
+										<div class="btn__icon">
+											<img src="assets/images/icons/burger.svg" alt="">
+										</div>
+									</a>
+								</div>
 							</li>
 							<li>
 								<a href="#" class="nav__link">Купим</a>
@@ -283,33 +303,73 @@
 				</div>
 				<div class="mobile-menu__inner">
 					<div class="mobile-menu__nav">
-						<ul>
+						<div class="mobile-menu-top">
+							<ul>
+								<li>
+									<a href="#" class="mobile-menu__link mobile-menu__link-drop">Производство <span>продукция</span></a>
+									<ul class="mobile-menu__submenu">
+										<li class="mobile-menu__back">
+											<img src="assets/images/icons/arrow-left.svg" alt="">
+											<a href="#">Назад</a>
+										</li>
+										<li>
+											<a href="#">Вся продукция</a>
+										</li>
+										<li>
+											<a href="#">Медь</a>
+										</li>
+										<li>
+											<a href="#">Свинец</a>
+										</li>
+										<li>
+											<a href="#">Бронза</a>
+										</li>
+										<li>
+											<a href="#">Латунь</a>
+										</li><li>
+											<a href="#">Припои</a>
+										</li>
+										<li>
+											<a href="#">Цинк</a>
+										</li>
+										<li>
+											<a href="#">Олово</a>
+										</li>
+										<li>
+											<a href="#">Баббиты</a>
+										</li>
+										<li>
+											<a href="#">Индий</a>
+										</li><li>
+											<a href="#">Сурьма</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="mobile-menu__hide">
+								<li>
+									<a href="#" class="mobile-menu__link">Купим</a>
+								</li>
+								<li>
+									<a href="#" class="mobile-menu__link">Лаборатория <span>платные услуги</span></a>
+								</li>
+								<li>
+									<a href="#" class="mobile-menu__link">Доставка</a>
+								</li>
+								<li>
+									<a href="#" class="mobile-menu__link">Фото</a>
+								</li>
+							</ul>
+						</div>
+						<ul class="mobile-menu-bottom">
 							<li>
-								<a href="#" class="mobile-menu__link">Производство <span>продукция</span></a>
-							</li>
-							<li>
-								<a href="#" class="mobile-menu__link">Купим</a>
-							</li>
-							<li>
-								<a href="#" class="mobile-menu__link">Лаборатория <span>платные услуги</span></a>
-							</li>
-							<li>
-								<a href="#" class="mobile-menu__link">Блог</a>
+								<a href="about.html" class="mobile-menu__link">О Нас</a>
 							</li>
 							<li>
 								<a href="#" class="mobile-menu__link">Вакансии</a>
 							</li>
 							<li>
-								<a href="about.html" class="mobile-menu__link">О Нас</a>
-							</li>
-							<li>
 								<a href="#" class="mobile-menu__link">Контакты</a>
-							</li>
-							<li>
-								<a href="#" class="mobile-menu__link">Доставка</a>
-							</li>
-							<li>
-								<a href="#" class="mobile-menu__link">Фото</a>
 							</li>
 						</ul>
 					</div>
@@ -319,13 +379,13 @@
 								<img src="assets/images/icons/phone-icon.svg" alt="">
 								<span>8 (812) 339-03-40</span>
 							</a>
-							<a href="https://yandex.ru/maps/org/npo_feniks/1464768750/?ll=30.555597%2C59.790230&source=wizbiz_new_map_single&z=17" class="header-contact__item" target="blank">
-								<img src="assets/images/icons/pin.svg" alt="">
-								<span>Санкт-Петербург,<br> пос. металлострой</span>
-							</a>
 							<a href="mailto:info@npo-fenix.ru" class="header-contact__item header-contact__item">
 								<img src="assets/images/icons/mail-icon.svg" alt="">
 								<span>info@npo-fenix.ru</span>
+							</a>
+							<a href="https://yandex.ru/maps/org/npo_feniks/1464768750/?ll=30.555597%2C59.790230&source=wizbiz_new_map_single&z=17" class="header-contact__item" target="blank">
+								<img src="assets/images/icons/pin.svg" alt="">
+								<span>Санкт-Петербург,<br> пос. металлострой</span>
 							</a>
 							<div class="header-contact__item header-contact__item">
 								<img src="assets/images/icons/clock-icon.svg" alt="">
@@ -747,18 +807,18 @@
 			<section class="text-block bg-gray bg-line bg-line_left">
 				<div class="container">
 					<div class="title-box">
-						<h2 class="title">Заголовок текстового блока</h2>
+						<h2 class="title">НПО «ФЕНИКС»</h2>
 					</div>
 					<div class="text-block__content">
 						<div class="text-block__text">
-							<p>Для приема металлолома создаются приемные пункты. После сдачи металлолома на специализированные предприятия, он сортируется, измельчается, прессуется в брикеты и идет в переплавку. Сдача металлолома позволяет многим организациям, не только навести порядок на своей территории, но и получить весомый доход. Не смотря на то, что в России имеется огромное количество источников сырья для производства черных металлов, вопрос о вторичном использовании металла остается актуальным. Наряду с черными металлами на пункты приема сдаются цветные металлы: алюминий, медь, никель.</p>
-							<ul class="list-dots">
-								<li class="list-dots__title">Требования:</li>
-								<li>Опыт работы на данной позиции не менее 3-х лет.</li>
-								<li>Навыки работы с плавильными печами.</li>
-								<li>Знание температур и режимов плавки металла.</li>
-							</ul>
-							<p>У организаций, занимающихся приемом и сбором металлического лома, существуют, как плюсы, так и минусы. Являясь, по сути своей, посредниками такие организации способствуют росту цен на лом. В связи с этим цена лома устанавливается в зависимости от множества обстоятельств, включающие в себя и котировки цен на металлы на Лондонской бирже металлов. Однако вместе этим такие организации оказывают помощь металлургическим предприятиям, решая вопрос обеспечения сырьем.</p>
+							<p>Производство цветных металлов выполняется в строгом соответствии с действующими государственными стандартами. Завод располагает самым современным оборудованием, вся продукция выпускается непосредственно на месте без делегирования каких-либо процессов сторонним подрядчикам. Весь производственный цикл, от выплавки до отгрузки готовой продукции заказчику, НПО «ФЕНИКС» берет на себя. Проверка качества цветных металлов и цветных сплавов выполняется в собственной аккредитованной, лицензированной лаборатории завода.</p>
+							<div class="text-block__more">
+								<p>НПО «ФЕНИКС» имеет все необходимые сертификаты и лицензии на производство цветных сплавов и металлов. Высокий уровень ответственности перед клиентами делает завод надежным партнером. В настоящее время НПО «ФЕНИКС» является одним из лидеров в отрасли производства цветных металлов и уверенно удерживает свои позиции.</p>
+							</div>
+							<a href="#" class="text-block__btn-more">
+								<span class="text-block__show">Подробнее</span>
+								<span class="text-block__hide">Скрыть</span>
+							</a>
 						</div>
 					</div>
 				</div>
