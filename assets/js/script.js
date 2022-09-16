@@ -109,6 +109,15 @@ $(document).ready(function() {
     });
   /*==========/nav-dropdown==========*/
 
+  /*==========Text-block__more==========*/
+    $(".text-block__btn-more").on("click", function(event) {
+        event.preventDefault();
+        $(this).find('.text-block__show').toggleClass('hide');
+        $(this).find(".text-block__hide").toggleClass('show');
+        $(this).prev().slideToggle(333);
+    });
+  /*==========/text-block__more==========*/
+
   /*======Sliders=============*/
 
   /*==Intro__slider==*/
