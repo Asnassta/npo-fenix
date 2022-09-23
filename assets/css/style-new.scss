@@ -792,6 +792,12 @@
 	}
 }
 
+@media(max-width: 860px) {
+	.header-contact__links {
+		display: none;
+	}
+}
+
 @media(max-width: 768px) {
 	.delivery {
 		&__map {

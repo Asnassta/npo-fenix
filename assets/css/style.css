@@ -4565,6 +4565,10 @@
   .manufacture__inner.line .manufacture-box {
     padding-right: 0; } }
 
+@media (max-width: 860px) {
+  .header-contact__links {
+    display: none; } }
+
 @media (max-width: 768px) {
   .delivery__map {
     -webkit-transform: translate(-50%, -10%);
