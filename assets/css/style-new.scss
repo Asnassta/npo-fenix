@@ -97,8 +97,8 @@
 	&-dropdown {
 		display: none;
 		position: absolute;
-		padding: 30px;
-		width: 380px;
+		padding: 16px 20px;
+		width: 250px;
 		top: calc(100% - 4px);
 		left: 0;
 		z-index: 10;
@@ -134,17 +134,38 @@
 			color: $bl;
 			line-height: 1.5;
 			padding-bottom: 16px;
-			border-bottom: 1px solid $lbrown;
 			transition: all .2s linear;
+			position: relative;
+			&:after {
+				content: "";
+				width: 20px;
+				height: 1px;
+				background-color: $op-brown;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: 1;
+				transition: all .2s linear;
+			}
 			&:hover {
 				color: $red;
 				border-color: $red;
+				&:after {
+					background-color: $red;
+				}
 			}
 		}
 		.btn {
-			margin-top: 24px;
-			flex: 1 1 auto;
-			min-width: 240px;
+			margin-top: 0;
+			span {
+				background-color: $wh;
+				color: $lbrown;
+				padding: 0;
+			}
+			&__icon {
+				padding: 0 0 0 10px;
+				background-color: $wh;
+			}
 		}
 	}
 }
