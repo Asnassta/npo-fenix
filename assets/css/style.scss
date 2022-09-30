@@ -280,6 +280,7 @@ body {
 
 /*=======Intro=======*/
 .intro {
+	display: none;/*fix*/
 	position: relative;
 	background: url("../images/intro-bg.png") center no-repeat; 
 	background-size: cover;
@@ -1011,7 +1012,7 @@ body {
 		}
 	}
 	.product {
-		padding: 40px  0 50px;
+		padding: 30px  0 50px;/*fix*/
 		&__inner {
 			flex-direction: column;
 			position: relative;

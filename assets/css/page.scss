@@ -1,5 +1,8 @@
 /*==========Header===========*/
 .header {
+	@media(max-width: 1200px) {
+		box-shadow: 0px 20px 20px rgba(55, 32, 14, 0.05);/*fix*/
+	}
 	&__menu {
 		background-color: $bl;
 		padding: 22px 0 20px;
@@ -510,7 +513,7 @@
 	}
 	&__contact {
 		background-color: $gray;
-		padding: 40px 40px 80px;
+		padding: 20px 40px 130px;/*fix*/
 		.header-contact__item {
 			margin-bottom: 10px;
 			&:last-child {
@@ -558,6 +561,22 @@
 /*========Footer=======*/
 .footer {
 	background-color: $bl;
+	/*=fix=*/
+	&.footer-gray {
+		.footer__nav {
+			background-color: $wh;
+			&:before {
+				background-color: $wh;
+			}
+		}
+		.footer__info {
+			background-color: $gray;
+			&:before {
+				background-color: $gray;
+			}
+		}
+	}
+	/*=/fix=*/
 	.nav {
 		flex: 1 1 auto;
 		margin-right: 100px;
@@ -579,7 +598,7 @@
 		flex: 0 0 68px;
 	}
 	&__nav {
-		background-color: $wh;
+		background-color: $gray;
 		display: flex;
 		justify-content: space-between;
 		margin-right: -167px;
@@ -589,7 +608,7 @@
 			content: "";
 			width: 1000%;
 			height: 100%;
-			background-color: $wh;
+			background-color: $gray;
 			position: absolute;
 			top: 0;
 			left: 1px;
@@ -605,14 +624,14 @@
 	}
 	&__info {
 		padding: 100px 50px 95px 1px;
-		background-color: $gray;
+		background-color: $wh;/*fix*/
 		flex: 0 0 325px;
 		position: relative;
 		&:before {
 			content: "";
 			width: 10000%;
 			height: 100%;
-			background-color: $gray;
+			background-color: $wh;/*fix*/
 			position: absolute;
 			top: 0;
 			left: 1px;
@@ -820,11 +839,23 @@
 			width: 5%;
 		}
 	}
+	.footer {
+		&__nav {
+			margin-right: -60px;/*fix*/
+		}
+	}
 }
+
 @media(max-width: 1400px) {
 	.bg-line {
 		&:after {
 			display: none;
+		}
+	}
+
+	.footer {
+		&__nav {
+			margin-right: 0;/*fix*/
 		}
 	}
 }
@@ -859,6 +890,15 @@
 		}
 	}
 	.footer {
+		/*=fix=*/
+		&.footer-gray {
+			.footer__info {
+				background-color: $wh;
+				&:before {
+					background-color: $wh;}
+			}
+		}
+		/*=/fix=*/
 		&__nav {
 			display: none;
 		}
@@ -866,10 +906,10 @@
 			display: flex;
 		}
 		&__info {
-			background-color: $wh;
+			background-color: $gray;
 			padding: 75px 42px 75px 1px;
 			&:before {
-				background-color: $wh;
+				background-color: $gray;
 			}
 		}
 		&__text {
@@ -1026,6 +1066,7 @@
 	.mobile-menu {
 		.header-contact__items {
 			display: block;
+			margin-right: 0;
 		}
 		&__social {
 			display: flex;
@@ -1078,6 +1119,27 @@
 		}
 	}
 }
+
+/*=fix=*/
+@media(max-width: 410px) {
+	.mobile-menu {
+		&__link-drop {
+			&:after {
+				bottom: -10px;
+			}
+		}
+		&__nav {
+			li {
+				padding: 10px 0;
+			}
+		}
+		&__social {
+			margin-top: 15px;
+		}
+	}
+}
+/*=/fix=*/
+
 @media(max-width: 360px) {
 	.header {
 		&__title {
