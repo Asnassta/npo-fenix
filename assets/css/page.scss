@@ -513,7 +513,7 @@
 	}
 	&__contact {
 		background-color: $gray;
-		padding: 20px 40px 130px;/*fix*/
+		padding: 20px 40px 150px;/*fix*/
 		.header-contact__item {
 			margin-bottom: 10px;
 			&:last-child {
@@ -1123,11 +1123,6 @@
 /*=fix=*/
 @media(max-width: 410px) {
 	.mobile-menu {
-		&__link-drop {
-			&:after {
-				bottom: -10px;
-			}
-		}
 		&__nav {
 			li {
 				padding: 10px 0;

@@ -1003,6 +1003,16 @@
 	}
 }
 
+@media(max-width: 410px) {
+	.mobile-menu {
+		&__link-drop {
+			&:after {
+				bottom: -10px;
+			}
+		}
+	}
+}
+
 @media(max-width: 375px) {
 	.manufacture {
 		.title {
