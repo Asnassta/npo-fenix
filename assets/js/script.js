@@ -520,7 +520,107 @@ $(document).ready(function() {
     },
     ]
   });
-  /*============/product-slider==========*/  
+  /*============/product-slider==========*/
+
+/*============Product-slider-new==========*/
+ $('.product-slider__slider-new').on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+    var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+    
+    $('.product-slider__progress')
+      .css('background-size', calc + '% 100%')
+      .attr('aria-valuenow', calc );
+    
+    $( '.product-slider__label' ).text( calc + '% completed' );
+  });
+  
+
+function productNew()
+{
+  if($(window).width() > 414)
+  {
+    $('.product-slider__slider-new').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 400,
+      slidesPerRow: 1,
+      rows: 2,
+      prevArrow: $('.product-slider__arrow_prev'),
+      nextArrow: $('.product-slider__arrow_next'),
+      responsive: [
+      {
+        breakpoint: 993,
+        settings: {
+          slidesPerRow: 1,
+          rows: 2,
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesPerRow: 1,
+          rows: 2,
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 415,
+        settings: "unslick"
+      },
+      ]
+    });
+  };
+};
+
+  $(window).resize(function(){
+    productNew();
+  });
+
+  productNew();
+
+  
+
+  $(".product-slider_new .btn").on("click", function(event) {
+    event.preventDefault();
+    $(".product-slider__slide").show();
+    $(this).hide();
+  });
+  /*==========/product-slider_new=========*/
+
+  /*==================Slider-nav==========*/
+$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true,
+  prevArrow: $('.slider-arrows__arrow_prev'),
+  nextArrow: $('.slider-arrows__arrow_next'),
+  responsive: [
+        {
+          breakpoint: 415,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: false,
+            centerMode: false,
+            focusOnSelect: true,
+            prevArrow: $('.slider-arrows__arrow_next'),
+            nextArrow: $('.slider-arrows__arrow_next'),
+          }
+        }
+      ]
+});  
 
 });
 

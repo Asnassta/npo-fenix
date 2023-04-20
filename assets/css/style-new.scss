@@ -943,6 +943,7 @@
 }
 
 @media(max-width: 765px) {
+	/*=========Download-btn======*/
 	.download-btn {
 		width: 100%;
 		&__name {
@@ -955,6 +956,7 @@
 	.download-btns {
 		margin-bottom: 10px;
 	}
+	/*=========/download-btn======*/
 
 	.delivery {
 		&__inner {
