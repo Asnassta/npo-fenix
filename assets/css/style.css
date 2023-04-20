@@ -4892,9 +4892,17 @@
     bottom: 0;
     z-index: 1; }
     .product-block__btn .download-btn {
-      width: 100%; }
+      width: 100%;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch; }
+      .product-block__btn .download-btn__icon img {
+        height: 100%; }
       .product-block__btn .download-btn__name {
-        text-align: left; }
+        text-align: left;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center; }
   .product-block .contact-box {
     border: none;
     background-color: #F9F9F9;

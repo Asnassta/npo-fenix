@@ -71,8 +71,15 @@
 		z-index: 1;
 		.download-btn {
 			width: 100%;
+			align-items: stretch;
+			&__icon {
+				img {
+					height: 100%;
+				}
+			}
 			&__name {
 				text-align: left;
+				align-self: center;
 			}
 		}
 	}
