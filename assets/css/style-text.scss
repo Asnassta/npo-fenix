@@ -1,0 +1,266 @@
+.text {
+	margin-top: 50px;
+	font-family: $ff;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+	p {
+		margin-bottom: 20px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	ul {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__more {
+		display: none;
+		margin-bottom: 20px;
+		&.show {
+			display: inline-block;
+		}
+	}
+	&__btn-more {
+		display: inline-block;
+		margin-top: 20px;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		span {
+			display: inline-block;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $red;
+			line-height: 1.5;
+			border-bottom: 1px dashed $red;
+			&:first-child {
+				display: inline-block;
+			}
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+		&.active {
+			span {
+				&:first-child {
+					display: none;
+				}
+				&:nth-child(2) {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.title-sub {
+	font-family: $ff;
+	font-size: 32px;
+	font-weight: 900;
+	color: $bl;
+	line-height: 1.3;
+	&_middle {
+		font-size: 28px;
+		font-weight: 900;
+	}
+	&_small {
+		font-size: 24px;
+		font-weight: 900;
+	}
+	&_min {
+		font-size: 20px;
+		font-weight: 700;
+	}
+}
+
+.list-dots-level {
+	li {
+		position: relative;
+		padding-left: 34px;
+		margin-bottom: 10px;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $bl;
+		line-height: 1.5;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:before {
+			content: "";
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			border: 2px solid $red;
+			position: absolute;
+			top: 8px;
+			left: 5px;
+			z-index: 1;
+		}
+		ul {
+			margin-top: 10px;
+			margin-bottom: 0;
+			&:first-child {
+				margin-top: 10px;
+			}
+		}
+	}
+	>li {
+		&:before {
+			content: "";
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			border: 2px solid $red;
+			background-color: $red;
+			position: absolute;
+			top: 8px;
+			left: 5px;
+			z-index: 1;
+		}
+	}
+}
+
+.list-num-level {
+	li {
+		margin-bottom: 10px;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $bl;
+		line-height: 1.5;
+		position: relative;
+		padding-left: 34px;
+		ul {
+			margin-top: 10px;
+			margin-bottom: 0;
+			&:first-child {
+				margin-top: 10px;
+			}
+		}
+	}
+	&__num {
+		color: $red;
+		display: inline-block;
+		min-width: 24px;
+		margin-right: 10px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+}
+
+.table {
+	display: flex;
+	margin: 40px 0;
+	&__col {
+		flex: 1 1 auto;
+		&:last-child {
+			.table__header, .table__item {
+				border-right: none;
+			}
+		}
+	}
+	&__header {
+		padding: 10px 16px;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.5;
+		color: $bl;
+		border-bottom: 1px solid $red;
+		border-right: 1px solid rgba(43, 50, 60, 0.10);
+	}
+	&__item {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.5;
+		color: $bl;
+		padding: 10px 16px;
+		border-right: 1px solid rgba(43, 50, 60, 0.10);
+		border-bottom: 1px solid rgba(43, 50, 60, 0.10);
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+@media(max-width: 770px) {
+	.text {
+		&.hide-small {
+			.text__more {
+				display: inline-block;
+				&.show {
+					display: none;
+				}
+			}
+			.text__btn-more {
+				span {
+					&:first-child {
+						display: none;
+					}
+					&:nth-child(2) {
+						display: inline-block;
+					}
+				}
+				&.active {
+					span {
+						&:first-child {
+							display: inline-block;
+						}
+						&:nth-child(2) {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 546px) {
+	.text {
+		margin-top: 30px;
+		&__btn-more {
+			margin-top: 0;
+		}
+	}
+
+	.table {
+		display: block;
+		&__header {
+			border-right: none;
+			padding: 10px 0;
+		}
+		&__item {
+			border-right: none;
+			padding: 10px 0;
+		}
+	}
+
+	.title-sub {
+		font-size: 28px;
+		&_middle {
+			font-size: 24px;
+		}
+		&_small {
+			font-size: 20px;
+			font-weight: 700;
+		}
+		&_min {
+			font-size: 16px;
+		}
+	}
+}

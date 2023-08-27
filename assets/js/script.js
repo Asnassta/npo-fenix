@@ -6,6 +6,14 @@ function tabs(n) {
 };
 
 $(document).ready(function() {
+    /*=============Text__more==========*/
+    $(".text__btn-more").on("click", function(event) {
+      event.preventDefault();
+      $(this).toggleClass("active");
+      $(".text__more").toggleClass("show");
+    });
+    /*=============/text__more==========*/
+
     /*======Production-filter=============*/
   $(".production-filter__btn").on("click", function(event) {
     event.preventDefault();
