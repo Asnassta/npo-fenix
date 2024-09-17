@@ -5919,7 +5919,8 @@
   width: 100%;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
-  align-items: stretch; }
+  align-items: stretch;
+  background: #fff; }
   .form .btn span {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
@@ -5931,7 +5932,7 @@
 /*==========Adaptive===========*/
 @media (max-width: 765px) {
   .btn-call {
-    bottom: 100px;
+    bottom: 60px;
     right: 10px; }
   .popup-contact .popup__inner {
     top: 50px; }
