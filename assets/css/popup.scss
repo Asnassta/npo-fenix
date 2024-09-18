@@ -44,7 +44,7 @@
 	display: none;
 	overflow: auto;
 	left: 0px;
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.5);
 	padding-bottom: 30px;
 	z-index: 500;
 	-ms-overflow-style: none;
@@ -57,9 +57,9 @@
 		opacity: 1;
 		width: 95%;
 		max-width: 320px;
-		top: 150px;
+		top: 50%;
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translate(-50%, -50%);
 		position: absolute;
 		display: none;
 		z-index: 600;
@@ -94,10 +94,18 @@
 		top: 18px;
 		right: 18px;
 		z-index: 2000;
+		transition: all .3s linear;
 		svg {
 			width: 12px;
 			height: 12px;
 			fill: $blue;
+			transition: all .1s linear;
+		}
+		&:hover {
+			transform: scale3d(1.2, 1.2, 1.2);
+			svg {
+				fill: $red;
+			}
 		}
 	}
 	&__title {
@@ -217,9 +225,6 @@
 	}
 	.popup {
 		&-contact {
-			.popup__inner {
-				top: 50px;
-			}
 			.popup__box {
 				max-height: calc(100vh - 100px);
 			}
