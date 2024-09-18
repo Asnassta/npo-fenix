@@ -5948,7 +5948,7 @@
   .popup-contact .popup__box {
     max-height: calc(100vh - 80px); } }
 
-@media (max-height: 800px) {
+@media (max-height: 760px) {
   .popup__inner {
     top: 40px;
     -webkit-transform: translate(-50%, 0);
