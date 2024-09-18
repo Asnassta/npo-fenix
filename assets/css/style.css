@@ -5946,7 +5946,14 @@
     bottom: 60px;
     right: 10px; }
   .popup-contact .popup__box {
-    max-height: calc(100vh - 50px); } }
+    max-height: calc(100vh - 80px); } }
+
+@media (max-height: 800px) {
+  .popup__inner {
+    top: 40px;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0); } }
 
 /*==========/adaptive===========*/
 @-webkit-keyframes shake {

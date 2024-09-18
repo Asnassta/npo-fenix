@@ -226,8 +226,17 @@
 	.popup {
 		&-contact {
 			.popup__box {
-				max-height: calc(100vh - 50px);
+				max-height: calc(100vh - 80px);
 			}
+		}
+	}
+}
+
+@media(max-height: 800px) {
+	.popup {
+		&__inner {
+			top: 40px;
+			transform: translate(-50%, 0);
 		}
 	}
 }
