@@ -5801,7 +5801,7 @@
   .popup__box {
     background-color: #fff;
     border-radius: 0px;
-    max-height: calc(100vh - 180px);
+    max-height: calc(100vh - 80px);
     overflow-x: auto; }
   .popup__content {
     padding: 30px 20px; }
